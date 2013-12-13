@@ -1,46 +1,81 @@
-##############################################################################
-# Purpose: Makefile for all storage related projects
-##############################################################################
+# Soccer Makefile
+# 
+# Make shared, static or debug targets.
+# 
+# Distribution: GPL 
 
-SHELL = /bin/sh
+OS := $(shell uname)
+OBJ = build
+TARGET = game
+RENAME = install_name_tool
+GNATMAKE = gnatmake -D $(OBJ)
+CARGS = -cargs -O3 -gnatp -gnatwu
+BARGS = -bargs
+LARGS = -largs
+VERBOSE = -v
+SHARED = libgnat-4.3.dylib
+ADA_LIB ?= /usr/local/ada-4.3/lib
+.PHONEY: clean cleaner dist-clean tar
 
-# otherdirs = Storage Streams Persistence Lock Transactions Memory Operations Recovery Utilities
-subdirs = . Server Server/Objects Server/Tasks Client # Client/Auctions Client/User Client/Login
-# subdirs = . Server Server/Interfaces Server/Objects Server/Tasks Server/Debug \
-#           Client Client/Auctions Client/User Client/Login
+all:
+	@echo ""
+	@echo "Soccer build targets:"
+	@echo ""
+	@echo "    shared     Use the shared Ada libraries."
+	@echo "    static     Link the Ada libraries statically."
+	@echo "    debug      Enable debugging."
+	@echo ""
+	@echo "Support targets:"
+	@echo ""
+	@echo "    clean      Remove *.ali *.o b~.*"
+	@echo "    cleaner    Remove target, too."
+	@echo "    dist-clean Remove Xcode build directory, too."
+	@echo "    tar        Build a clean distribution tarball."
+	@echo ""
 
-# The subdirectories of the project
+shared: $(OBJ)
+shared: INCLUDE = $(shell gtkada-config --cflags)
+shared: BARGS += -shared
+shared: LARGS += $(shell gtkada-config --libs)
+shared: LARGS += -dead_strip
+shared: *.ad[sb]
+	@echo "building with shared libraries:"
+	$(GNATMAKE) $(TARGET) $(INCLUDE) $(CARGS) $(BARGS) $(LARGS)
+ifeq ($(OS), Darwin)
+#	$(RENAME) -change $(SHARED) $(ADA_LIB)/$(SHARED) $(TARGET)
+endif
 
-CC       = gcc
-GNATMAKE = gnatmake
-GNATDIST = po_gnatdist
-GFLAGS   = -g -gnata -gnatf
-LINKER_FLAGS = -t
-CONFIG_FILE = Dist_Soccer.cfg
-GTKADA_CONFIG = `gtkada-config`
+static: $(OBJ)
+static: INCLUDE = $(shell gtkada-config --static --cflags)
+static: BARGS += -static
+static: LARGS += $(shell gtkada-config --static --libs)
+static: LARGS += -dead_strip
+static: *.ad[sb]
+	$(GNATMAKE) $(TARGET) $(INCLUDE) $(CARGS) $(BARGS) $(LARGS)
 
-INCLUDE_DIRS = $(subdirs:%=-I./%) 
-# $(otherdirs:%=-I../%)
-# defines the include directories
+debug: $(OBJ)
+debug: INCLUDE = $(shell gtkada-config --static --cflags)
+debug: BARGS += -static
+debug: LARGS += $(shell gtkada-config --static --libs)
+debug: *.ad[sb]
+	$(GNATMAKE) -g $(TARGET) $(INCLUDE) $(LARGS)
 
-all: glade
-	
-.PHONY : all
+$(OBJ):
+	mkdir $(OBJ)
 
-glade:
-	$(GNATDIST) $(GFLAGS) $(INCLUDE_DIRS) $(CONFIG_FILE) $(GTKADA_CONFIG) -largs $(LINKER_FLAGS)
-.PHONY : glade
+clean:
+	${RM} $(OBJ)/* b~*
 
-clean :
-	@-rm -rf dsa/ bin/
-	@-rm -f *.o *.ali core *~ b~*
-	@-for dir in $(subdirs); do \
-	   echo Making clean in $$dir; \
-	   (cd $$dir; rm -f *.o *.ali core *~ b~*); \
-	done
-.PHONY : clean
+cleaner: clean
+	${RM} $(TARGET)
 
+dist-clean: cleaner
+	${RM} -r $(OBJ) 
 
-
-
-
+tar: dist-clean
+ifeq ($(OS), Darwin)
+	(export COPYFILE_DISABLE=true; \
+	tar --exclude '.svn' -zcvf soccer.tgz ../0.1)
+else
+	tar --exclude '.svn' -zcvf soccer.tgz ../0.1
+endif

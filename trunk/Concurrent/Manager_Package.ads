@@ -5,7 +5,7 @@
 --
 --
 ------------------------------------------------------
-with Field;			use Field;
+with Field_Package;			use Field_Package;
 with Player_Package;		use Player_Package;
 
 package Manager_Package is
@@ -30,6 +30,6 @@ package Manager_Package is
 
 	end Manager;
 	
-	type Manager_Access is access all Manager;
+	type Manager_Access is access Manager;
 	
 end Manager_Package;

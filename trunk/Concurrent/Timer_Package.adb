@@ -1,8 +1,31 @@
 with Ada.Real_Time;		use Ada.Real_Time;
 
-package body Timer_Controller is
+package body Timer_Package is
+	
+	protected body TimeCount is
 		
-	task body Timer_Ctrl is
+		-- imposta il proprietario del pallone 
+		entry Increment 
+			when Timing < 450 is
+		begin
+			Timing := Timing + 1;
+		end Increment;
+				
+		-- ritorna il timing di gioco
+		function GetTime return Integer is
+		begin
+			return Timing;
+		end GetTime;
+
+		-- ritorna il tempo totale del match
+		function GetTotalTime return Integer is
+		begin
+			return TotalTime;
+		end GetTotalTime;
+				
+	end TimeCount;
+	
+	task body Timer is
 		
 		Current_Period : Time_Span := Milliseconds(1);
 		Next_Cycle : Time := Clock + Current_Period;
@@ -26,7 +49,7 @@ package body Timer_Controller is
 				T.Increment;
 			end if;
 	
-			if (T.GetTime = T.GetTotalTime) then 
+			if (T.GetTime = (T.GetTotalTime/100)) then 
 				-- termina l'esecuzione di taskball e dei giocatori
 				B.Stop;
 				M1.Stop;
@@ -46,6 +69,6 @@ package body Timer_Controller is
 			
 		end loop;
 			
-	end Timer_Ctrl;
+	end Timer;
 		
-end Timer_Controller;
+end Timer_Package;

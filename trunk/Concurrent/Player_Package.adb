@@ -106,7 +106,7 @@ package body Player_Package is
 	begin
 		F.SetPosition(ID, M, Dir);
 		if(B.GetOwner = ID) then
-			F.SetPosition(0, M, Dir);
+			F.SetBallPosition(M, Dir);
 		end if;
 	end Movement;
 	
@@ -166,7 +166,7 @@ package body Player_Package is
 		Flag : Boolean := False;
 	begin
 		X := F.GetPlayerPosition(ID);
-		Y := F.GetPlayerPosition(0);
+		Y := F.GetBallPosition;
 		if (X = Y) then
 			Flag := True;
 		end if;
@@ -335,8 +335,8 @@ package body Player_Package is
 		M : Move;
 		Completed : Boolean := False;
 	begin
-		if (Visibility(F.GetPlayerPosition(0), Pos, Vis) and not Completed) then -- se palla visibile avvicinati (sali/scendi)
-			M := GetDirection(F.GetPlayerPosition(0), Pos, Dir);
+		if (Visibility(F.GetBallPosition, Pos, Vis) and not Completed) then -- se palla visibile avvicinati (sali/scendi)
+			M := GetDirection(F.GetBallPosition, Pos, Dir);
 			if(F.CheckMovement(Dir, M, PRole, Pos)) then
 				Movement(ID, Dir, M, F, B);
 				Completed := True; -- azione completata						
@@ -354,12 +354,12 @@ package body Player_Package is
 	procedure NoneBall(ID : in Integer; Pos : in Position; PRole : in Role; Dir : in Integer; F : in Field_Access; B : in Ball_Access) is
 		M : Move;
 	begin
-		M := GetDirection(F.GetPlayerPosition(0), Pos, Dir);
+		M := GetDirection(F.GetBallPosition, Pos, Dir);
 		if (F.CheckMovement(Dir, M, PRole, Pos)) then
 			Movement(ID, Dir, M, F, B);
 			if(GetBall(ID, F)) then -- prende la palla
 				B.Control(ID);
-				F.SetPosition(0, F.GetPlayerPosition(ID));
+				F.SetBallPosition(F.GetPlayerPosition(ID));
 				Put_Line("Control: " & Integer'Image(B.GetOwner));
 			end if;
 		end if;
@@ -373,12 +373,12 @@ package body Player_Package is
 		M : Move;
 		Completed : Boolean := False;
 	begin
-		if (Visibility(F.GetPlayerPosition(0), Pos, Vis) and not Completed) then -- se palla visibile avvicinati (sali/scendi)
-			M := GetDirection(F.GetPlayerPosition(0), Pos, Dir);
+		if (Visibility(F.GetBallPosition, Pos, Vis) and not Completed) then -- se palla visibile avvicinati (sali/scendi)
+			M := GetDirection(F.GetBallPosition, Pos, Dir);
 			if(F.CheckMovement(Dir, M, PRole, Pos)) then
 				Movement(ID, Dir, M, F, B);
 				
-				if (Visibility(F.GetPlayerPosition(0), Pos, 1)) then
+				if (Visibility(F.GetBallPosition, Pos, 1)) then
 					-- ******************************
 					-- ******************************
 
@@ -416,7 +416,7 @@ package body Player_Package is
 			-- estrae i dati necessari per eventuali valutazioni --
 			-------------------------------------------------------
 			P1 := F.GetPositions;
-			P2 := F.GetPlayerPosition(0);
+			P2 := F.GetBallPosition;
 			P3 := B.GetOwner;
 			P4 := F.GetPlayerPosition(ID);
 			R := Prop.GetRole;

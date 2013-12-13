@@ -5,9 +5,8 @@
 --
 --
 ------------------------------------------------------
-with Field;		use Field;
-with Ball;      		use Ball;
-with Ball_Controller;      		use Ball_Controller;
+with Field_Package;		use Field_Package;
+with Ball_Package;		use Ball_Package;
 with Player_Package;	use Player_Package;
 
 package Referee_Package is
@@ -26,6 +25,6 @@ package Referee_Package is
 	end Referee;
 
 	-- tipo access al tipo player
-	type Referee_Access is access all Referee;
+	type Referee_Access is access Referee;
 
 end Referee_Package;

@@ -24,11 +24,8 @@ package body Display_Package is
 
 	Field : Field_Access;
 	Ball : Ball_Access;
-	Time : Timer_Controller_Access;
+	Time : TimeCount_Access;
 	Timer : Timer_Access;
-    
-    -- debug
-    Test : Boolean := True;
 
 	package Void_Cb is new Gtk.Handlers.Callback (Gtk.Window.Gtk_Window_Record);
 	package Button_Cb is new Gtk.Handlers.Callback (Gtk.Button.Gtk_Button_Record);
@@ -69,32 +66,23 @@ package body Display_Package is
 		Gdk.Drawable.Draw_Arc(Pixmap, Layer1_Gc, False, 260, 149, 130, 130, 0 * 64, 360 * 64);
 
 		-- disegna la palla
-		BP := GetCoordinates(Field, 0);
+		BP := Field.GetBallPosition;
 		Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, True, Gint(BP.Col*2), Gint(BP.Row*2), 10, 10, 0 * 64, 360 * 64);
 
 		-- disegna i vari giocatori in campo
 		for i in 1..22 loop
 			if (i < 12) then
-				PP := GetCoordinates(Field, i);
-                if (Test) then
-                 Ada.Text_IO.Put_Line("-D- Int: " & Integer'Image(i) & " Player " & Integer'Image(PP.ID) & ": Row " & Integer'Image(PP.Row) & " - Col " & Integer'Image(PP.Col));
-				end if;
+				PP := Field.GetPlayerPosition(i);
 				Gdk.Drawable.Draw_Arc(Pixmap, Layer2_Gc, True, Gint(PP.Col*2), Gint(PP.Row*2), 20, 20, 0 * 64, 360 * 64);
-				-- if (i = Ball.GetOwner) then
-				-- 	Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, False, Gint(PP.Col*2-3), Gint(PP.Row*2-3), 26, 26, 0 * 64, 360 * 64);
-				-- end if;
+				if (i = Ball.GetOwner) then
+					Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, False, Gint(PP.Col*2-3), Gint(PP.Row*2-3), 26, 26, 0 * 64, 360 * 64);
+				end if;
 			else
-				PP := GetCoordinates(Field, i);
-                if (Test) then
-                    Ada.Text_IO.Put_Line("-D- Int: " & Integer'Image(i) & " Player " & Integer'Image(PP.ID) & ": Row " & Integer'Image(PP.Row) & " - Col " & Integer'Image(PP.Col));
-                    if (i = 22) then
-                        Test := False;
-                    end if;
-                end if;
+				PP := Field.GetPlayerPosition(i);
 				Gdk.Drawable.Draw_Arc(Pixmap, Layer3_Gc, True, Gint(PP.Col*2), Gint(PP.Row*2), 20, 20, 0 * 64, 360 * 64);
-				-- if (i = Ball.GetOwner) then
-				-- 	Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, False, Gint(PP.Col*2-3), Gint(PP.Row*2-3), 26, 26, 0 * 64, 360 * 64);
-				-- end if;
+				if (i = Ball.GetOwner) then
+					Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, False, Gint(PP.Col*2-3), Gint(PP.Row*2-3), 26, 26, 0 * 64, 360 * 64);
+				end if;
 
 			end if;
 		end loop;
@@ -118,8 +106,7 @@ package body Display_Package is
 	------------------
 	function UpdateScore (Label : in Gtk_Label) return Boolean is
 	begin
-		-- Set_Text (Label, "Score:   Red " & Integer'Image(Field.GetScore(1)) & " - " & Integer'Image(Field.GetScore(2)) & " Blue");
-		Set_Text (Label, "Score:   Red 0 - 0 Blue");
+		Set_Text (Label, "Score:   Red " & Integer'Image(Field.GetScore(1)) & " - " & Integer'Image(Field.GetScore(2)) & " Blue");
 		return True;
 	end UpdateScore;
    
@@ -129,9 +116,8 @@ package body Display_Package is
 	function UpdateTimer (Label : in Gtk_Label) return Boolean is
 		T : Integer;
 	begin
-		--T := Time.GetTime;
-		-- Set_Text (Label, "Time:   " & Integer'Image(T/5) & ":00");
-		Set_Text (Label, "Time:   **:00");
+		T := Time.GetTime;
+		Set_Text (Label, "Time:   " & Integer'Image(T/5) & ":00");
 		return True;
 	end UpdateTimer;
 
@@ -141,8 +127,7 @@ package body Display_Package is
 	procedure Starter (Button : access Gtk.Button.Gtk_Button_Record'Class) is
 		pragma Warnings (Off, Button);
 	begin
-        Ada.Text_IO.Put_Line("Start Pressed");
-		-- Timer.Start;
+		Timer.Start;
 	end Starter;
 	
 	-------------
@@ -166,12 +151,12 @@ package body Display_Package is
 	-------------------------
 	-- Init Field and Ball --
 	-------------------------
-	procedure References(F : in Field_Access; B : in Ball_Access; Tmr : out Timer_Controller_Access; Tm : out Timer_Access) is
+	procedure References(F : in Field_Access; B : in Ball_Access; T : in TimeCount_Access; Tm : in Timer_Access) is
 	begin
 		-- inizializza le variablili globali Field e Ball
 		Field := F;
 		Ball := B;
-		Time := Tmr;
+		Time := T;
 		Timer := Tm;
 	end References;
 		
@@ -246,8 +231,7 @@ package body Display_Package is
 		Gtk.Label.Set_Style (Timer, Style);
 		
 		-- Row 1.1: a label with style: Score
-		-- Gtk.Label.Gtk_New (Score, "Score:   Red " & Integer'Image(Field.GetScore(1)) & " - " & Integer'Image(Field.GetScore(2)) & " Blue");
-		Gtk.Label.Gtk_New (Score, "Score:   Red X - X Blue");
+		Gtk.Label.Gtk_New (Score, "Score:   Red " & Integer'Image(Field.GetScore(1)) & " - " & Integer'Image(Field.GetScore(2)) & " Blue");
 		Style := Gtk.Style.Copy (Gtk.Window.Get_Style (Win));
 		Gtk.Style.Set_Font_Description (Style, Pango.Font.From_String ("Arial Bold 14"));
 		Gtk.Label.Set_Style (Score, Style);

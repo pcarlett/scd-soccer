@@ -5,13 +5,9 @@
 --
 --
 ------------------------------------------------------
-with Pos;               use Pos;
-with Field;		        use Field;
-with Ball;      		use Ball;
-with Ball_Controller;   use Ball_Controller;
-with Timer;     		use Timer;
-with Timer_Controller;  use Timer_Controller;
-with Server;        	use Server;
+with Field_Package;		use Field_Package;
+with Ball_Package;		use Ball_Package;
+with Timer_Package;		use Timer_Package;
 with Gtk.Window;	 	use Gtk.Window;
 with Gtk.Drawing_Area;	use Gtk.Drawing_Area;
 with Glib;				use Glib;
@@ -37,8 +33,8 @@ package Display_Package is
 	-- procedura per chiudere i processi
 	procedure Quit (Win : access Gtk.Window.Gtk_Window_Record'Class);
 
-	-- procedura per inizializzare le variabili
-	procedure References(F : in Field_Access; B : in Ball_Access; Tmr : out Timer_Controller_Access; Tm : out Timer_Access);
+	-- procedura 
+	procedure References(F : in Field_Access; B : in Ball_Access; T : in TimeCount_Access; Tm : in Timer_Access);
 
 	-- procedura per inizializzare il display
 	procedure Init;

@@ -5,10 +5,8 @@
 --
 --
 ------------------------------------------------------
-with Pos;  use Pos;
-with Field;		use Field;
-with Ball;      		use Ball;
-with Ball_Controller;      		use Ball_Controller;
+with Field_Package;		use Field_Package;
+with Ball_Package;		use Ball_Package;
 
 package Player_Package is 
 	
@@ -16,7 +14,7 @@ package Player_Package is
 	type Team;
 		
 	-- tipo access al tipo Team
-	type Team_Access is access all Team;
+	type Team_Access is access Team;
 		
 	protected type Props is
 		
@@ -36,11 +34,11 @@ package Player_Package is
 		
 	end Props;
 	
-	type Props_Access is access all Props;
+	type Props_Access is access Props;
 		
 	type PropsArray is array (1..11) of Props_Access;
 		
-	type PropsArray_Access is access all PropsArray;
+	type PropsArray_Access is access PropsArray;
 		
 	-- ID, Role, Team, Direction, Field, Ball, Visibility, Speed, Power, Precision
 	task type Player (ID : Integer; Prop : Props_Access; T : Team_Access; Dir : Integer; F : Field_Access; B : Ball_Access; 
@@ -55,7 +53,7 @@ package Player_Package is
 	end Player;
 	
 	-- tipo access al tipo player
-	type Player_Access is access all Player;
+	type Player_Access is access Player;
 		
 	-- definizione della classe team
 	type Team is array (1..11) of Player_Access;
