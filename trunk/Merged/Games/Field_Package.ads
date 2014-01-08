@@ -5,6 +5,7 @@
 --
 --
 ------------------------------------------------------
+with Event_Manager;				use Event_Manager;
 
 package Field_Package is
 
@@ -37,9 +38,9 @@ package Field_Package is
 	function Near(A, B : Position) return Boolean;
 
 	-- gestione della lista di posizioni come array
-	type PositionList is array (1..22) of Position;
+	type PositionList is array (0..22) of Position;
 	
-	protected type Field (N : Integer) is -- N: numero giocatori per determinare la dimensione
+	protected type Field (N : Integer; E_Mgr : E_Manager_Acc) is -- N: numero giocatori per determinare la dimensione
 		
 		-- funzione per inizializzare le posizioni
 		procedure InitField;

@@ -104,7 +104,7 @@ package body Field_Package is
 		function GetPlayerPosition (ID : in Integer) return Position is
 			P : Position;
 		begin
-			for i in 1..22 loop
+			for i in 0..22 loop
 				if (PList(i).ID = ID) then
 					P := PList(i);
 				end if;
@@ -127,43 +127,58 @@ package body Field_Package is
 			
 		-- procedura per la modifica dello stato del campo su un oggetto protetto
 		procedure SetPosition (ID : in Integer; M : in Move; Dir : in Integer) is
+			x : Integer;
 		begin
-			for i in 1..22 loop -- 
+			for i in 0..22 loop -- 
 				if (PList(i).ID = ID) then
 
 					case M is
 						when Up =>
 							PList(i).Row := PList(i).Row - 1;
+							x := i;
 						when Down =>
 							PList(i).Row := PList(i).Row + 1;
+							x := i;
 						when Forwd =>
 							if (Dir = 1) then
 								PList(i).Col := PList(i).Col + 1;
+								x := i;
 							else
 								PList(i).Col := PList(i).Col - 1;
+								x := i;
 							end if;
 						when Backwd =>
 							if (Dir = 1) then
 								PList(i).Col := PList(i).Col - 1;
+								x := i;
 							else
 								PList(i).Col := PList(i).Col + 1;
+								x := i;
 							end if;
 						when others =>
 							null;
 					end case;
 				end if;
 			end loop;
+			
+			E_Mgr.Generate(ID, PList(x).Row, PList(x).Col);
+			
 		end SetPosition;
 		
 		-- procedura per la modifica dello stato del campo su un oggetto protetto
 		procedure SetPosition (ID : in Integer; P : in Position) is
+			x : Integer;
 		begin
-			for i in 1..22 loop
+			for i in 0..22 loop
 				if (PList(i).ID = ID) then
 					PList(i).Row := P.Row;
 					PList(i).Col := P.Col;
+					x := i;
 				end if;
 			end loop;
+			
+			E_Mgr.Generate(ID, PList(x).Row, PList(x).Col);
+			
 		end SetPosition;
 		
 		-- procedura per la modifica dello stato della palla in campo
@@ -189,6 +204,9 @@ package body Field_Package is
 				when others =>
 					null;
 			end case;
+			
+			E_Mgr.Generate(0, PList(0).Row, PList(0).Col);
+			
 		end SetBallPosition;
 		
 		-- procedura per la modifica dello stato della palla in campo
@@ -196,6 +214,9 @@ package body Field_Package is
 		begin
 			Ball.Row := P.Row;
 			Ball.Col := P.Col;
+			
+			E_Mgr.Generate(0, PList(0).Row, PList(0).Col);
+			
 		end SetBallPosition;
 		
 		-- funzione per il test del movimento

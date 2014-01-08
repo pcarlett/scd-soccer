@@ -11,14 +11,10 @@ INCLUDE_DIRS = $(subdirs:%=-I./%)
 OS := $(shell uname)
 OBJ = build
 TARGET = Game.adb
-RENAME = install_name_tool
 GNATMAKE = gnatmake -D $(OBJ)
 CARGS = -cargs -O3 -gnatp -gnatwu
 BARGS = -bargs
 LARGS = -largs
-VERBOSE = -v
-SHARED = libgnat-4.3.dylib
-ADA_LIB ?= /usr/local/ada-4.3/lib
 .PHONEY: clean tar
 ####################################################
 
@@ -71,4 +67,4 @@ clean :
 	done
 	
 tar: clean
-	tar --exclude '.git' -zcvf ../archive/dist_soccer.tgz *
+	tar --exclude '.git' -zcvf ../Archive/scd_soccer.tgz *

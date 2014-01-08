@@ -13,7 +13,7 @@ package Queue is
 	pragma Asynchronous (Push);
 	
 	private
-	    Queue_Size : constant := 1000;
+	    Queue_Size : constant := 1000000;
 	    subtype Queue_Range is Positive range 1 .. Queue_Size;
 	    Data : array (Queue_Range) of Basic_Event.Event_Ptr;
 

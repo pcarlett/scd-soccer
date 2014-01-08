@@ -12,11 +12,13 @@ with Player_Package;	use Player_Package;
 with Manager_Package;	use Manager_Package;
 with Referee_Package;	use Referee_Package;
 with Display_Package;	use Display_Package;
+with Event_Manager;		use Event_Manager;
 with Gtk.Main;			use Gtk.Main;
 
 procedure Game is
 	
-	F : Field_Access := new Field(22);
+	E_Mgr : E_Manager_Acc := new E_Manager;
+	F : Field_Access := new Field(22, E_Mgr);
 	B : Ball_Access := new Ball(F);
 	Tm : TimeCount_Access := new TimeCount;
 	
@@ -45,6 +47,7 @@ procedure Game is
 	Tmr : Timer_Access;
 	
 begin
+	E_Mgr.Start;
 	-- inizializzazione delle posizioni
 	F.InitField;
 
