@@ -1,0 +1,44 @@
+---------------------------------------------------------------------------------------------------------------------------
+E' necessario creare una RCI su DISPLAY che permetta di mandare in stampa l'evento attraverso i parametri necessari. 
+In questo modo "Simulate" attiva il metodo che riconosce l'evento e lancia la procedura remota "Print" sul DISPLAY.
+Da testare la possibilità che sia possibile utilizzare il polimorfismo.
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+Il precedente gestore della coda era un task di tipo attivo. Questo non permette la gestione attraverso metodi remoti.
+
+task body E_Queuer is
+    -- Guarded queue from Queuer task
+    Queue_Size : constant := 1000;
+    subtype Queue_Range is Positive range 1 .. Queue_Size;
+    Length : Natural range 0 .. Queue_Size := 0;
+    Head, Tail : Queue_Range := 1;
+    Data : array (Queue_Range) of Basic_Event.Event_Ptr;
+begin
+    accept Start do
+        Put ("Event Queuer activating...");
+    end Start;
+    Put_Line (" done.");
+    loop
+        select
+            when Length < Queue_Size =>
+                accept Push (E_Ptr: in Basic_Event.Event_Ptr) do
+                    Data(Tail) := E_Ptr;
+					Put_Line ("E_Que: event pushed in queue.");
+	                Tail := Tail mod Queue_Size + 1;
+	                Length := Length + 1;
+                end Push;
+        or
+            when Length > 0 =>
+                accept Pop (E_Ptr: out Basic_Event.Event_Ptr) do
+                    E_Ptr := Data(Head);
+					Put_Line ("E_Que: event popped out from queue.");
+	                Head := Head mod Queue_Size + 1;
+	                Length := Length - 1;
+                end Pop;
+        end select;
+    end loop;
+end E_Queuer;
+    	
+L'uso dei 2 metodi PUSH e POP permette di accedere alla coda condivisa.
