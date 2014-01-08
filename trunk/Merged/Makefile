@@ -3,15 +3,28 @@
 ##############################################################################
 
 # The subdirectories of the project
-subdirs = . Events Tasks Commons Remotes Programs
+subdirs = . Commons Events Games Programs Remotes Tasks Visor
+INCLUDE_DIRS = $(subdirs:%=-I./%) 
+
+### Directives for concurrent with Gtk+
+####################################################
+OS := $(shell uname)
+OBJ = build
+TARGET = Game.adb
+RENAME = install_name_tool
+GNATMAKE = gnatmake -D $(OBJ)
+CARGS = -cargs -O3 -gnatp -gnatwu
+BARGS = -bargs
+LARGS = -largs
+VERBOSE = -v
+SHARED = libgnat-4.3.dylib
+ADA_LIB ?= /usr/local/ada-4.3/lib
+.PHONEY: clean tar
+####################################################
 
 # The directives for compilation
-GNATMAKE = gnatmake
 GNATDIST = po_gnatdist
-SOURCE_FILE = Server.adb
 CONFIG_FILE = Dist_Soccer.cfg
-
-INCLUDE_DIRS = $(subdirs:%=-I./%) 
 
 all: 
 	@echo ""
@@ -26,12 +39,19 @@ all:
 	@echo "    client: for client program"
 	@echo ""
 	
-	
-compile:
-	$(GNATMAKE) -g $(INCLUDE_DIRS) $(SOURCE_FILE)
-	
+compile: $(OBJ)
+compile: INCLUDE = $(shell gtkada-config --static --cflags)
+compile: BARGS += -static
+compile: LARGS += $(shell gtkada-config --static --libs)
+compile: LARGS += -dead_strip
+compile: *.ad[sb]
+	$(GNATMAKE) -g $(INCLUDE_DIRS) $(TARGET) $(INCLUDE) $(CARGS) $(BARGS) $(LARGS) 
+
 distr:
 	$(GNATDIST) -g $(INCLUDE_DIRS) $(CONFIG_FILE)
+
+$(OBJ):
+	mkdir $(OBJ)
 
 queue:
 	@./bin/queue_partition
@@ -43,8 +63,8 @@ client:
 	@./bin/client1_partition
 
 clean :
-	@-rm -rf dsa/ bin/
-	@-rm -f *.o *.ali core *~ b~* server
+	@-rm -rf dsa/ bin/ build/
+	@-rm -f *.o *.ali core *~ b~* game
 	@-for dir in $(subdirs); do \
 	   echo Making clean in $$dir; \
 	   (cd $$dir; rm -f *.o *.ali core *~ b~*); \
