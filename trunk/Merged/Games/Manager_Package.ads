@@ -9,11 +9,7 @@ with Field_Package;			use Field_Package;
 with Player_Package;		use Player_Package;
 
 package Manager_Package is
-	
-	type Strategy is (Attack, Middle, Defense);
-	
-	type Module is (Mod442, Mod352, Mod343, Mod451);
-		
+			
 	procedure ChangeModule(Md : in Module; Pr : PropsArray_Access);
 	
 	-- procedure ChangePlayers(A : in Player; B : in Player);

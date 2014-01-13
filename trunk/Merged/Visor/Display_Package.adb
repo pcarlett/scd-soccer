@@ -151,13 +151,10 @@ package body Display_Package is
 	-------------------------
 	-- Init Field and Ball --
 	-------------------------
-	procedure References(F : in Field_Access; B : in Ball_Access; T : in TimeCount_Access; Tm : in Timer_Access) is
+	procedure References(V : in Vector_Access) is
 	begin
-		-- inizializza le variablili globali Field e Ball
-		Field := F;
-		Ball := B;
-		Time := T;
-		Timer := Tm;
+		-- inizializza la variablile Vector posizionale
+		Vector := V;
 	end References;
 		
 	----------

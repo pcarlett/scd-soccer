@@ -5,41 +5,22 @@
 --
 --
 ------------------------------------------------------
+with Common_Types;				use Common_Types;
 with Event_Manager;				use Event_Manager;
-
 package Field_Package is
 
 	-- dichiarazione di oggetto remoto
 	-- pragma Remote_Types;
-
-	type Move is (Up, Down, Forwd, Backwd);
-
-	-- dichiarazione dei ruoli dei giocatori
-	type Role is (STK, LFW, CFW, RFW, LMF, CMF, RMF, LDF, CDF, RDF, GKP);
 		
 	-- funzione per la definizione dei limiti di movimento dei ruoli
 	procedure RoleLimit(Dir : in Integer; R : in Role; A,B,C,D : out Integer);
 
-	type Position is record
-		ID : Integer;
-		Row : Integer;
-		Col : Integer;
-	end record;
-
-	type Score is record
-		T1 : Integer;
-		T2 : Integer;
-	end record;
-	
 	function "-" (A, B : Position) return Integer;
 	
 	function "=" (A, B : Position) return Boolean;
 
 	function Near(A, B : Position) return Boolean;
 
-	-- gestione della lista di posizioni come array
-	type PositionList is array (0..22) of Position;
-	
 	protected type Field (N : Integer; E_Mgr : E_Manager_Acc) is -- N: numero giocatori per determinare la dimensione
 		
 		-- funzione per inizializzare le posizioni

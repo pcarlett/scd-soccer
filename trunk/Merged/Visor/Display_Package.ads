@@ -5,9 +5,7 @@
 --
 --
 ------------------------------------------------------
-with Field_Package;		use Field_Package;
-with Ball_Package;		use Ball_Package;
-with Timer_Package;		use Timer_Package;
+with Vector_Package;	use Vector_Package;
 with Gtk.Window;	 	use Gtk.Window;
 with Gtk.Drawing_Area;	use Gtk.Drawing_Area;
 with Glib;				use Glib;
@@ -34,7 +32,7 @@ package Display_Package is
 	procedure Quit (Win : access Gtk.Window.Gtk_Window_Record'Class);
 
 	-- procedura 
-	procedure References(F : in Field_Access; B : in Ball_Access; T : in TimeCount_Access; Tm : in Timer_Access);
+	procedure References(V : in Vector_Access);
 
 	-- procedura per inizializzare il display
 	procedure Init;

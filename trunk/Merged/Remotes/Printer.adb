@@ -3,7 +3,7 @@
 --
 --------------------------------------------------------------------------------
 with Ada.Text_IO;	use Ada.Text_IO;
-package body Printer is
+package body Printer is			
 				
 	procedure Print (A: in Actions) is
 	begin
@@ -33,5 +33,15 @@ package body Printer is
 		Put_Line (" *-*- End of Stats -*-* ");
 		Put_Line ("");
 	end Print;
+	
+	procedure Transmit (ID: in Integer; R: in Integer; C: in Integer) is
+	begin
+		
+	end Transmit;
+	
+	procedure Transmit (G1, G2, F1, F2, Off1, Off2, Out1, Out2, P1, P2 : in Integer) is
+	begin
+		
+	end Transmit;
 	
 end Printer;
