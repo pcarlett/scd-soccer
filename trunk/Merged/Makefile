@@ -41,10 +41,16 @@ compile: BARGS += -static
 compile: LARGS += $(shell gtkada-config --static --libs)
 compile: LARGS += -dead_strip
 compile: *.ad[sb]
-	$(GNATMAKE) -g $(INCLUDE_DIRS) $(TARGET) $(INCLUDE) $(CARGS) $(BARGS) $(LARGS) 
+	$(GNATMAKE) -g $(INCLUDE_DIRS) $(TARGET) $(INCLUDE) $(CARGS) $(BARGS) $(LARGS)
 
+distr: $(OBJ)
+distr: INCLUDE = $(shell gtkada-config --static --cflags)
+distr: BARGS += -static
+distr: LARGS += $(shell gtkada-config --static --libs)
+distr: LARGS += -dead_strip
+distr: *.ad[sb]
 distr:
-	$(GNATDIST) -g $(INCLUDE_DIRS) $(CONFIG_FILE)
+	$(GNATDIST) -g $(INCLUDE_DIRS) $(CONFIG_FILE) $(INCLUDE) $(CARGS) $(BARGS) $(LARGS)
 
 $(OBJ):
 	mkdir $(OBJ)
