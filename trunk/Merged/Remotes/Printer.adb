@@ -36,12 +36,12 @@ package body Printer is
 	
 	procedure Transmit (ID: in Integer; R: in Integer; C: in Integer) is
 	begin
-		
+		null;
 	end Transmit;
 	
 	procedure Transmit (G1, G2, F1, F2, Off1, Off2, Out1, Out2, P1, P2 : in Integer) is
 	begin
-		
+		null;
 	end Transmit;
 	
 end Printer;

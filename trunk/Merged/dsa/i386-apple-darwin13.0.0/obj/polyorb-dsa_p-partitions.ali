@@ -1,0 +1,214 @@
+V "GNAT Lib v2012"
+A -O3
+A -g
+A -gnatp
+A -gnatwu
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnvnnvnnnnnnnnvnnnnvnnnnvnnnvnnvnnnnnnnnnnnnnn
+
+U polyorb.dsa_p.partitions%b  polyorb-dsa_p-partitions.adb  7e5682cd OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W polyorb%s		polyorb.ads		polyorb.ali
+W polyorb.dsa_p%s	polyorb-dsa_p.ads	polyorb-dsa_p.ali
+W polyorb.log%s		polyorb-log.adb		polyorb-log.ali
+W polyorb.tasking%s	polyorb-tasking.ads	polyorb-tasking.ali
+W polyorb.tasking.mutexes%s  polyorb-tasking-mutexes.adb  polyorb-tasking-mutexes.ali
+W system%s		system.ads		system.ali
+W system.partition_interface%s  s-parint.adb	s-parint.ali
+W system.rpc%s		s-rpc.adb		s-rpc.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U polyorb.dsa_p.partitions%s  polyorb-dsa_p-partitions.ads  c58a0671 EB EE NE OO RC PK
+W polyorb.dsa_p%s	polyorb-dsa_p.ads	polyorb-dsa_p.ali
+
+D ada.ads		20120510125803 3ffc8e18
+D a-charac.ads		20120510125749 2d3ec45b
+D a-chlat1.ads		20120510125749 2825df20
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125753 52ecdc1b
+D a-stream.ads		20120510125756 2ca4ee37
+D a-string.ads		20120510125757 90ac6797
+D a-strmap.ads		20120510125757 9cb836fb
+D a-strsup.ads		20120510125757 a27dcb33
+D a-strunb.ads		20120510125757 3f91d4c5
+D a-stwima.ads		20120510125757 09a6f5ac
+D a-stwisu.ads		20120510125757 ca9332d8
+D a-stwiun.ads		20120510125757 64ae971d
+D a-tags.ads		20120510125759 6c0509d0
+D a-tgdico.ads		20120510125800 764e0706
+D a-unccon.ads		20120510125801 f9eb8f06
+D a-uncdea.ads		20120510125801 f15a5ed1
+D interfac.ads		20120510125815 129923ea
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-annotations.ads  20120514092100 177ede12
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-any-exceptionlist.ads  20120514092100 ab9b596a
+D polyorb-any-nvlist.ads  20120514092101 3479a3ce
+D polyorb-any-objref.ads  20120514092101 27f9f08b
+D polyorb-asynch_ev.ads	20120514092101 f3430136
+D polyorb-binding_data.ads  20120514092101 963ae14d
+D polyorb-binding_objects.ads  20120514092101 ceccc4e5
+D polyorb-binding_objects-lists.ads  20120514092101 c0b24d0d
+D polyorb-buffers.ads	20120514092101 b4d604b0
+D polyorb-components.ads  20120514092101 3f79f8ff
+D polyorb-dsa_p.ads	20120514092045 9992676b
+D polyorb-dsa_p-exceptions.ads  20120514092043 717634e7
+D polyorb-dsa_p-partitions.ads  20120514092044 5c18611a
+D polyorb-dsa_p-partitions.adb  20120514092044 7e616cc4
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-exceptions.ads  20120514092102 899167cc
+D polyorb-filters.ads	20120514092102 be81b6b9
+D polyorb-initialization.ads  20120514092103 cac335a4
+D polyorb-jobs.ads	20120514092103 4abbbf82
+D polyorb-log.ads	20120514092103 9c4bb0cf
+D polyorb-log.adb	20120514092103 22341b14
+D polyorb-obj_adapters.ads  20120514092103 21275526
+D polyorb-object_maps.ads  20120514092104 adb23e90
+D polyorb-objects.ads	20120514092104 5cc5684f
+D polyorb-opaque.ads	20120514092104 96880399
+D polyorb-opaque-chunk_pools.ads  20120514092104 642fce91
+D polyorb-orb.ads	20120514092104 3e1c8871
+D polyorb-orb_controller.ads  20120514092113 3263531b
+D polyorb-orb_controller-workers.ads  20120514092116 0cbd6d1d
+D polyorb-parameters.ads  20120514092106 f99d19da
+D polyorb-partition_elaboration.ads  20120514092045 fe9daacd
+D polyorb-poa.ads	20120514092106 e6e75542
+D polyorb-poa_manager.ads  20120514092104 0fd9b3c7
+D polyorb-poa_policies.ads  20120514092104 7bd2b626
+D polyorb-poa_policies-id_assignment_policy.ads  20120514092106 80ba5d46
+D polyorb-poa_policies-id_uniqueness_policy.ads  20120514092116 ff7218da
+D polyorb-poa_policies-implicit_activation_policy.ads  20120514092108 8f0658b0
+D polyorb-poa_policies-lifespan_policy.ads  20120514092114 14e3c8e8
+D polyorb-poa_policies-request_processing_policy.ads  20120514092111 90755f8d
+D polyorb-poa_policies-servant_retention_policy.ads  20120514092112 9c0b5ff6
+D polyorb-poa_policies-thread_policy.ads  20120514092114 4aa04be4
+D polyorb-poa_types.ads	20120514092110 1e96e5de
+D polyorb-qos.ads	20120514092110 b83460cc
+D polyorb-qos-term_manager_info.ads  20120514092045 807a5c72
+D polyorb-references.ads  20120514092114 7052ce92
+D polyorb-representations.ads  20120514092105 2b7563ab
+D polyorb-request_scheduler.ads  20120514092109 10f19e55
+D polyorb-requests.ads	20120514092110 a033b92a
+D polyorb-sequences.ads	20120514092115 f6dbc651
+D polyorb-sequences-unbounded.ads  20120514092109 bc551b1d
+D polyorb-servants.ads	20120514092115 4aade96c
+D polyorb-services.ads	20120514092110 186aa883
+D polyorb-services-naming.ads  20120514092107 d8c9f6a7
+D polyorb-services-naming-helper.ads  20120514092109 22074897
+D polyorb-services-naming-namingcontext.ads  20120514092112 57b7b736
+D polyorb-services-naming-namingcontext-client.ads  20120514092117 bb2e5288
+D polyorb-setup.ads	20120514092109 cb33b4b9
+D polyorb-setup-oa.ads	20120514092105 33a2e4a5
+D polyorb-setup-oa-basic_poa.ads  20120514092116 16d30b60
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-task_info.ads	20120514092105 7ec1cd90
+D polyorb-tasking.ads	20120514092111 d815d5f1
+D polyorb-tasking-abortables.ads  20120514092112 526978d4
+D polyorb-tasking-condition_variables.ads  20120514092115 deccbc14
+D polyorb-tasking-idle_tasks_managers.ads  20120514092115 9c87ff2e
+D polyorb-tasking-mutexes.ads  20120514092117 3103553b
+D polyorb-tasking-threads.ads  20120514092117 c3cd59ed
+D polyorb-termination_activity.ads  20120514092045 cbdbe65c
+D polyorb-transport.ads	20120514092117 91ef09de
+D polyorb-types.ads	20120514092113 f453197c
+D polyorb-utils.ads	20120514092113 6c128a8b
+D polyorb-utils-chained_lists.ads  20120514092117 3294f8a3
+D polyorb-utils-dynamic_tables.ads  20120514092116 6864320f
+D polyorb-utils-hfunctions.ads  20120514092107 82b4c8f6
+D polyorb-utils-hfunctions-hyper.ads  20120514092106 657d7a19
+D polyorb-utils-htables.ads  20120514092117 a4a1de38
+D polyorb-utils-htables-perfect.ads  20120514092116 54749466
+D polyorb-utils-ilists.ads  20120514092107 d241f94c
+D polyorb-utils-simple_flags.ads  20120514092117 3140190a
+D polyorb-utils-strings.ads  20120514092117 dae37d40
+D polyorb-utils-strings-lists.ads  20120514092109 969ebf9d
+D system.ads		20120510125846 75f1d483
+D s-atocou.ads		20120510125819 4a9c6cb4
+D s-atocou.adb		20120510125819 7116b4cf
+D s-dsatyp.ads		20120514092046 23c1e58e
+D s-exctab.ads		20120510125824 66e51330
+D s-finmas.ads		20120510125825 b95bb341
+D s-finroo.ads		20120510125825 4ff27390
+D s-imenne.ads		20120510125825 8707cbf0
+D s-parame.ads		20120510125832 b6e20cc0
+D s-parint.ads		20120514092046 29c74135
+D s-pooglo.ads		20120510125832 542f33d0
+D s-rpc.ads		20120510125833 d8a02bd2
+D s-secsta.ads		20120510125833 eea35a36
+D s-soflin.ads		20120510125833 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-stposu.ads		20120510125834 197be7e5
+D s-stratt.ads		20120510125834 aedef97e
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-valenu.ads		20120510125839 bb1a4295
+X 18 interfac.ads
+61M9*Unsigned_32
+107V13*Shift_Left{61M9} 99|37i18
+X 19 polyorb.ads
+35K9*PolyORB 37e12 33|35r9 43r5 34|33r6 34r6 39r14 41r8 42r8 44r21 116r5
+X 21 polyorb-any.ads
+218V28*"="=220:32{boolean} 92|41i19
+X 27 polyorb-binding_objects.ads
+52P9*Binding_Object_Access(50R9)
+56V13*Link(52P9) 98|54i21
+X 31 polyorb-dsa_p.ads
+35K17*DSA_P 19|35k9 31|37e18 33|35r17 43r13 34|39r22 116r13
+X 33 polyorb-dsa_p-partitions.ads
+35K23*Partitions 31|35k17 33|43l19 43e29 34|39b28 116l19 116t29
+39V13*Allocate_Partition_ID{integer} 39>36 34|66b13 79l8 79t29 95s11
+39s36 Name{string} 34|66b36 77r26
+X 34 polyorb-dsa_p-partitions.adb
+44K12 L[40|73] 46r14 48r14
+45U14 O=46:16 75s13
+45s17 Message{string}
+45e35 Level{40|41E9}
+47V13 C=48:16{boolean} 75s10
+47e16 Level{40|41E9}
+50p4 Partitions_Mutex{86|51P9} 69r14 72r14 88m15 88r15
+52i4 Next_Partition_ID{integer} 70r31 71m7 71r28
+57V13 Elaborate{boolean} 85b13 98l8 98t17 111s32
+67i7 Current_Partition_ID{integer} 70m7 76r32 78r14
+111b4 Dummy{boolean} 112r25
+X 40 polyorb-log.ads
+35K17*Log 34|33w14 41r16 44r29 40|124e16
+41E9*Log_Level 34|45r43 47r24 40|64e8
+45n7*Debug{41E9} 34|45r56 47r37
+73k12*Facility_Log 34|44r33 40|88e20
+77U17*Output 34|46r16[44]
+83V16*Enabled{boolean} 34|48r16[44]
+X 46 polyorb-opaque-chunk_pools.ads
+46R9*Chunk
+47P9*Chunk_Access(46R9[29|357])
+98V13 Link(47P9) 98|54i21
+X 81 polyorb-task_info.ads
+70R9*Task_Info
+71P9*Task_Info_Access(70R9)
+255V13 Link(71P9) 98|54i21
+X 82 polyorb-tasking.ads
+51K17*Tasking 34|34r14 42r16 82|55e20
+X 86 polyorb-tasking-mutexes.ads
+42K25*Mutexes 34|34w22 42r24 86|126e28
+51P9*Mutex_Access(50R9) 34|50r23
+58x14*Enter 34|69R7
+65x14*Leave 34|72R7
+104U14*Create 34|88s7
+X 92 polyorb-utils-chained_lists.ads
+133R9 Node
+134P9 Node_Access(133R9[47|244])
+157V13 Link(134P9[47|311]) 98|54i21[47|311]
+X 102 system.ads
+37K9*System 34|36r6 37r6 86r11 94r10 102|169e11
+X 111 s-parint.ads
+70K16*Partition_Interface 34|36w13 86r18 111|740e31
+104V13*Get_Local_Partition_Name{string} 34|95s34
+110U14*Set_Local_Partition_ID 34|93s7
+X 113 s-rpc.ads
+42K16*RPC 34|37w13 94r17 113|94e15
+44I9*Partition_ID<short_short_integer> 34|94r21
+

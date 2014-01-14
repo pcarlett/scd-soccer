@@ -1,0 +1,226 @@
+V "GNAT Lib v2012"
+A -O3
+A -g
+A -gnatp
+A -gnatwu
+A -gnatA
+P SS ZX
+R vnnnnnnnnnvnnnnnnnvvnvnnnvnnvvnvnnnnvnnnnnnnvnnnnnnnnnnnnnvnnnnvnnnvnnvnv2nnnnnnnnnv1+nn
+
+U queue%b		queue.adb		fd5602fd OO PF PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+
+U queue%s		queue.ads		e07bedfa EE OO RC PK
+W basic_event%s		basic_event.ads		basic_event.ali
+
+D ada.ads		20120510125803 3ffc8e18
+D a-charac.ads		20120510125749 2d3ec45b
+D a-chlat1.ads		20120510125749 2825df20
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125753 52ecdc1b
+D a-ioexce.ads		20120510125753 8b9de6cd
+D a-stream.ads		20120510125756 2ca4ee37
+D a-string.ads		20120510125757 90ac6797
+D a-strmap.ads		20120510125757 9cb836fb
+D a-strsup.ads		20120510125757 a27dcb33
+D a-strunb.ads		20120510125757 3f91d4c5
+D a-stwima.ads		20120510125757 09a6f5ac
+D a-stwisu.ads		20120510125757 ca9332d8
+D a-stwiun.ads		20120510125757 64ae971d
+D a-tags.ads		20120510125759 6c0509d0
+D a-tgdico.ads		20120510125800 764e0706
+D a-textio.ads		20120510125800 386df5d4
+D a-unccon.ads		20120510125801 f9eb8f06
+D a-uncdea.ads		20120510125801 f15a5ed1
+D basic_event.ads	20140108171519 927945cc
+D interfac.ads		20120510125815 129923ea
+D i-c.ads		20120510125814 5421119b
+D i-cstrea.ads		20120510125814 1bd72c32
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-annotations.ads  20120514092100 177ede12
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-any-exceptionlist.ads  20120514092100 ab9b596a
+D polyorb-any-nvlist.ads  20120514092101 3479a3ce
+D polyorb-any-objref.ads  20120514092101 27f9f08b
+D polyorb-asynch_ev.ads	20120514092101 f3430136
+D polyorb-binding_data.ads  20120514092101 963ae14d
+D polyorb-binding_objects.ads  20120514092101 ceccc4e5
+D polyorb-binding_objects-lists.ads  20120514092101 c0b24d0d
+D polyorb-buffers.ads	20120514092101 b4d604b0
+D polyorb-components.ads  20120514092101 3f79f8ff
+D polyorb-dsa_p.ads	20120514092045 9992676b
+D polyorb-dsa_p-exceptions.ads  20120514092043 717634e7
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-exceptions.ads  20120514092102 899167cc
+D polyorb-filters.ads	20120514092102 be81b6b9
+D polyorb-initialization.ads  20120514092103 cac335a4
+D polyorb-jobs.ads	20120514092103 4abbbf82
+D polyorb-log.ads	20120514092103 9c4bb0cf
+D polyorb-obj_adapters.ads  20120514092103 21275526
+D polyorb-object_maps.ads  20120514092104 adb23e90
+D polyorb-objects.ads	20120514092104 5cc5684f
+D polyorb-opaque.ads	20120514092104 96880399
+D polyorb-opaque-chunk_pools.ads  20120514092104 642fce91
+D polyorb-orb.ads	20120514092104 3e1c8871
+D polyorb-orb_controller.ads  20120514092113 3263531b
+D polyorb-orb_controller-workers.ads  20120514092116 0cbd6d1d
+D polyorb-parameters.ads  20120514092106 f99d19da
+D polyorb-partition_elaboration.ads  20120514092045 fe9daacd
+D polyorb-poa.ads	20120514092106 e6e75542
+D polyorb-poa_manager.ads  20120514092104 0fd9b3c7
+D polyorb-poa_policies.ads  20120514092104 7bd2b626
+D polyorb-poa_policies-id_assignment_policy.ads  20120514092106 80ba5d46
+D polyorb-poa_policies-id_uniqueness_policy.ads  20120514092116 ff7218da
+D polyorb-poa_policies-implicit_activation_policy.ads  20120514092108 8f0658b0
+D polyorb-poa_policies-lifespan_policy.ads  20120514092114 14e3c8e8
+D polyorb-poa_policies-request_processing_policy.ads  20120514092111 90755f8d
+D polyorb-poa_policies-servant_retention_policy.ads  20120514092112 9c0b5ff6
+D polyorb-poa_policies-thread_policy.ads  20120514092114 4aa04be4
+D polyorb-poa_types.ads	20120514092110 1e96e5de
+D polyorb-qos.ads	20120514092110 b83460cc
+D polyorb-qos-term_manager_info.ads  20120514092045 807a5c72
+D polyorb-references.ads  20120514092114 7052ce92
+D polyorb-representations.ads  20120514092105 2b7563ab
+D polyorb-request_scheduler.ads  20120514092109 10f19e55
+D polyorb-requests.ads	20120514092110 a033b92a
+D polyorb-sequences.ads	20120514092115 f6dbc651
+D polyorb-sequences-unbounded.ads  20120514092109 bc551b1d
+D polyorb-servants.ads	20120514092115 4aade96c
+D polyorb-services.ads	20120514092110 186aa883
+D polyorb-services-naming.ads  20120514092107 d8c9f6a7
+D polyorb-services-naming-helper.ads  20120514092109 22074897
+D polyorb-services-naming-namingcontext.ads  20120514092112 57b7b736
+D polyorb-services-naming-namingcontext-client.ads  20120514092117 bb2e5288
+D polyorb-setup.ads	20120514092109 cb33b4b9
+D polyorb-setup-oa.ads	20120514092105 33a2e4a5
+D polyorb-setup-oa-basic_poa.ads  20120514092116 16d30b60
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-task_info.ads	20120514092105 7ec1cd90
+D polyorb-tasking.ads	20120514092111 d815d5f1
+D polyorb-tasking-abortables.ads  20120514092112 526978d4
+D polyorb-tasking-condition_variables.ads  20120514092115 deccbc14
+D polyorb-tasking-idle_tasks_managers.ads  20120514092115 9c87ff2e
+D polyorb-tasking-mutexes.ads  20120514092117 3103553b
+D polyorb-tasking-threads.ads  20120514092117 c3cd59ed
+D polyorb-termination_activity.ads  20120514092045 cbdbe65c
+D polyorb-transport.ads	20120514092117 91ef09de
+D polyorb-types.ads	20120514092113 f453197c
+D polyorb-utils.ads	20120514092113 6c128a8b
+D polyorb-utils-chained_lists.ads  20120514092117 3294f8a3
+D polyorb-utils-dynamic_tables.ads  20120514092116 6864320f
+D polyorb-utils-hfunctions.ads  20120514092107 82b4c8f6
+D polyorb-utils-hfunctions-hyper.ads  20120514092106 657d7a19
+D polyorb-utils-htables.ads  20120514092117 a4a1de38
+D polyorb-utils-htables-perfect.ads  20120514092116 54749466
+D polyorb-utils-ilists.ads  20120514092107 d241f94c
+D polyorb-utils-simple_flags.ads  20120514092117 3140190a
+D polyorb-utils-strings.ads  20120514092117 dae37d40
+D polyorb-utils-strings-lists.ads  20120514092109 969ebf9d
+D queue.ads		20140108225223 7202a836
+D queue.adb		20140108171519 b7395f1f
+D system.ads		20120510125846 75f1d483
+D s-atacco.ads		20120510125819 4c36d12f
+D s-atocou.ads		20120510125819 4a9c6cb4
+D s-atocou.adb		20120510125819 7116b4cf
+D s-crtl.ads		20120510125824 ac77b159
+D s-dsatyp.ads		20120514092046 23c1e58e
+D s-exctab.ads		20120510125824 66e51330
+D s-ficobl.ads		20120510125825 443b9d66
+D s-finmas.ads		20120510125825 b95bb341
+D s-finroo.ads		20120510125825 4ff27390
+D s-imgint.ads		20120510125826 02dbe0c2
+D s-multip.ads		20120510125828 38ac9f73
+D s-oscons.ads		20120514140920 ed51b575
+D s-osinte.ads		20120510125828 a671a606
+D s-parame.ads		20120510125832 b6e20cc0
+D s-parint.ads		20120514092046 29c74135
+D s-pooglo.ads		20120510125832 542f33d0
+D s-rpc.ads		20120510125833 d8a02bd2
+D s-secsta.ads		20120510125833 eea35a36
+D s-soflin.ads		20120510125833 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stausa.ads		20120510125834 017a0a05
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-stposu.ads		20120510125834 197be7e5
+D s-stratt.ads		20120510125834 aedef97e
+D s-tasinf.ads		20120510125836 e120e23a
+D s-taspri.ads		20120510125836 15f617a8
+D s-taskin.ads		20120510125836 5e24fb30
+D s-taprob.ads		20120510125835 502249e3
+D s-tpoben.ads		20120510125837 20b7a89e
+D s-tpobop.ads		20120510125837 5f548bb3
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-wchcon.ads		20120510125840 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 105|5r6 5r29
+X 17 a-textio.ads
+49K13*Text_IO 471e16 105|5w10 5r33
+263U14*Put_Line 105|24s25 25s25 26s25 27s25 36s41 41s41 45s41
+X 20 basic_event.ads
+5K9*Basic_Event 19e16 104|5w6 10r35 11r47 18r43 105|9r49 10r65 14r49 30r65
+. 50r35 55r47
+10P14*Event_Ptr(9R14) 104|10r47 11r59 18r55 105|9r61 10r77 14r61 30r77 50r47
+. 55r59
+X 21 interfac.ads
+61M9*Unsigned_32
+107V13*Shift_Left{61M9} 101|37i18
+X 26 polyorb-any.ads
+218V28*"="=220:32{boolean} 94|41i19
+X 32 polyorb-binding_objects.ads
+52P9*Binding_Object_Access(50R9)
+56V13*Link(52P9) 100|54i21
+X 48 polyorb-opaque-chunk_pools.ads
+46R9*Chunk
+47P9*Chunk_Access(46R9[34|357])
+98V13 Link(47P9[34|357]) 100|54i21[34|357]
+X 83 polyorb-task_info.ads
+70R9*Task_Info
+71P9*Task_Info_Access(70R9)
+255V13 Link(71P9) 100|54i21
+X 94 polyorb-utils-chained_lists.ads
+133R9 Node
+134P9 Node_Access(133R9[103|43])
+157V13 Link(134P9[49|311]) 100|54i21[49|311]
+X 104 queue.ads
+6K9*Queue 30l5 30e10 105|6b14 60l5 60t10
+10U19*Push 10>25 13r30 105|50b19 53l13 53t17
+10p25 E_Ptr{20|10P14} 105|50b25 52r49
+11U15*Pop 11>20 11<36 105|55b15 58l13 58t16
+11i20 Id{integer} 105|55b20 57r48
+11p36 E_Ptr{20|10P14} 105|55b36 57m52
+16N13 Queue_Size 17r56 25r42 28r42 105|15r40 15r65 19r34 20r36 21r36 37r52
+. 42r52
+17I21 Queue_Range{positive} 18r27 23r24 26r28 29r28
+18a13 Data(20|10P14) 105|18m17 35r50 40r50
+23i17 Tail{17I21} 105|18r22 19m17 19r25
+25i13 Length1{natural} 105|15r30 22m17 22r28 25r58 31r30 38m33 38r44
+26i13 Head1{17I21} 105|26r58 35r55 37m33 37r42
+26i20 Tail1{17I21} 105|20m17 20r26 27r58
+28i13 Length2{natural} 105|15r55 23m17 23r28 25r93 31r45 43m33 43r44
+29i13 Head2{17I21} 105|26r91 40r55 42m33 42r42
+29i20 Tail2{17I21} 105|21m17 21r26 27r91
+X 105 queue.adb
+8w19 Protected_Queue 13b24 48l13 48t28 52r17 57r17
+9Y23 Protected_Push 9>39 14b23 28l21 28t35 52s33
+9p39 E_Ptr{20|10P14} 18r31
+10Y23 Protected_Pop 10>38 10<54 30b23 47l21 47t34 57s33
+10i38 Id{integer} 33r30
+10p54 E_Ptr{20|10P14} 35m41 40m41
+14p39 E_Ptr{20|10P14}
+30i38 Id{integer}
+30p54 E_Ptr{20|10P14}
+

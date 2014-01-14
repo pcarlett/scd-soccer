@@ -1,0 +1,288 @@
+V "GNAT Lib v2012"
+M P AB W=b
+A -O3
+A -g
+A -gnatp
+A -gnatwu
+A -gnatA
+P SS ZX
+R nnnvnnnnnnnnnnnnnnnnnnnnnnnnvvnvnvvvnnnnnvnnvnnvnnnvnnnnnnvnnnnvnnnnnnvnnnnnnnv1+nnnv1+nn
+
+U game%b		game.adb		913981b9 NE OO SU
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ball_package%s	ball_package.adb	ball_package.ali
+W common_types%s	common_types.ads	common_types.ali
+W event_manager%s	event_manager.adb	event_manager.ali
+W field_package%s	field_package.adb	field_package.ali
+W manager_package%s	manager_package.adb	manager_package.ali
+W player_package%s	player_package.adb	player_package.ali
+W referee_package%s	referee_package.adb	referee_package.ali
+W system%s		system.ads		system.ali
+W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W timer_package%s	timer_package.adb	timer_package.ali
+
+D ada.ads		20120510125803 3ffc8e18
+D a-charac.ads		20120510125749 2d3ec45b
+D a-chlat1.ads		20120510125749 2825df20
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125753 52ecdc1b
+D a-numeri.ads		20120510125755 bb51c45a
+D a-nudira.ads		20120510125755 2fef2912
+D a-nuelfu.ads		20120510125755 03e83d1c
+D a-ngelfu.ads		20120510125754 243903c9
+D a-reatim.ads		20120510125755 63f07669
+D a-stream.ads		20120510125756 2ca4ee37
+D a-string.ads		20120510125757 90ac6797
+D a-strmap.ads		20120510125757 9cb836fb
+D a-strsup.ads		20120510125757 a27dcb33
+D a-strunb.ads		20120510125757 3f91d4c5
+D a-stwima.ads		20120510125757 09a6f5ac
+D a-stwisu.ads		20120510125757 ca9332d8
+D a-stwiun.ads		20120510125757 64ae971d
+D a-tags.ads		20120510125759 6c0509d0
+D a-tgdico.ads		20120510125800 764e0706
+D a-unccon.ads		20120510125801 f9eb8f06
+D a-uncdea.ads		20120510125801 f15a5ed1
+D ball_package.ads	20140114222250 2f988e8f
+D basic_event.ads	20140108171519 927945cc
+D common_types.ads	20140114222919 87455f19
+D event_manager.ads	20140108171519 a076a71e
+D field_package.ads	20140113214532 cc01722a
+D game.adb		20140114222430 7684fbb4
+D interfac.ads		20120510125815 129923ea
+D i-c.ads		20120510125814 5421119b
+D manager_package.ads	20140114222318 9ada5218
+D player_package.ads	20140114222058 d0ef26ef
+D polyorb.ads		20120514092109 1b2dc832
+D polyorb-annotations.ads  20120514092100 177ede12
+D polyorb-any.ads	20120514092101 06c36295
+D polyorb-any-exceptionlist.ads  20120514092100 ab9b596a
+D polyorb-any-nvlist.ads  20120514092101 3479a3ce
+D polyorb-any-objref.ads  20120514092101 27f9f08b
+D polyorb-asynch_ev.ads	20120514092101 f3430136
+D polyorb-binding_data.ads  20120514092101 963ae14d
+D polyorb-binding_objects.ads  20120514092101 ceccc4e5
+D polyorb-binding_objects-lists.ads  20120514092101 c0b24d0d
+D polyorb-buffers.ads	20120514092101 b4d604b0
+D polyorb-components.ads  20120514092101 3f79f8ff
+D polyorb-dsa_p.ads	20120514092045 9992676b
+D polyorb-dsa_p-exceptions.ads  20120514092043 717634e7
+D polyorb-errors.ads	20120514092102 ab5de59c
+D polyorb-exceptions.ads  20120514092102 899167cc
+D polyorb-filters.ads	20120514092102 be81b6b9
+D polyorb-initialization.ads  20120514092103 cac335a4
+D polyorb-jobs.ads	20120514092103 4abbbf82
+D polyorb-log.ads	20120514092103 9c4bb0cf
+D polyorb-obj_adapters.ads  20120514092103 21275526
+D polyorb-object_maps.ads  20120514092104 adb23e90
+D polyorb-objects.ads	20120514092104 5cc5684f
+D polyorb-opaque.ads	20120514092104 96880399
+D polyorb-opaque-chunk_pools.ads  20120514092104 642fce91
+D polyorb-orb.ads	20120514092104 3e1c8871
+D polyorb-orb_controller.ads  20120514092113 3263531b
+D polyorb-orb_controller-workers.ads  20120514092116 0cbd6d1d
+D polyorb-parameters.ads  20120514092106 f99d19da
+D polyorb-partition_elaboration.ads  20120514092045 fe9daacd
+D polyorb-poa.ads	20120514092106 e6e75542
+D polyorb-poa_manager.ads  20120514092104 0fd9b3c7
+D polyorb-poa_policies.ads  20120514092104 7bd2b626
+D polyorb-poa_policies-id_assignment_policy.ads  20120514092106 80ba5d46
+D polyorb-poa_policies-id_uniqueness_policy.ads  20120514092116 ff7218da
+D polyorb-poa_policies-implicit_activation_policy.ads  20120514092108 8f0658b0
+D polyorb-poa_policies-lifespan_policy.ads  20120514092114 14e3c8e8
+D polyorb-poa_policies-request_processing_policy.ads  20120514092111 90755f8d
+D polyorb-poa_policies-servant_retention_policy.ads  20120514092112 9c0b5ff6
+D polyorb-poa_policies-thread_policy.ads  20120514092114 4aa04be4
+D polyorb-poa_types.ads	20120514092110 1e96e5de
+D polyorb-qos.ads	20120514092110 b83460cc
+D polyorb-qos-term_manager_info.ads  20120514092045 807a5c72
+D polyorb-references.ads  20120514092114 7052ce92
+D polyorb-representations.ads  20120514092105 2b7563ab
+D polyorb-request_scheduler.ads  20120514092109 10f19e55
+D polyorb-requests.ads	20120514092110 a033b92a
+D polyorb-sequences.ads	20120514092115 f6dbc651
+D polyorb-sequences-unbounded.ads  20120514092109 bc551b1d
+D polyorb-servants.ads	20120514092115 4aade96c
+D polyorb-services.ads	20120514092110 186aa883
+D polyorb-services-naming.ads  20120514092107 d8c9f6a7
+D polyorb-services-naming-helper.ads  20120514092109 22074897
+D polyorb-services-naming-namingcontext.ads  20120514092112 57b7b736
+D polyorb-services-naming-namingcontext-client.ads  20120514092117 bb2e5288
+D polyorb-setup.ads	20120514092109 cb33b4b9
+D polyorb-setup-oa.ads	20120514092105 33a2e4a5
+D polyorb-setup-oa-basic_poa.ads  20120514092116 16d30b60
+D polyorb-smart_pointers.ads  20120514092117 f3f72a41
+D polyorb-task_info.ads	20120514092105 7ec1cd90
+D polyorb-tasking.ads	20120514092111 d815d5f1
+D polyorb-tasking-abortables.ads  20120514092112 526978d4
+D polyorb-tasking-condition_variables.ads  20120514092115 deccbc14
+D polyorb-tasking-idle_tasks_managers.ads  20120514092115 9c87ff2e
+D polyorb-tasking-mutexes.ads  20120514092117 3103553b
+D polyorb-tasking-threads.ads  20120514092117 c3cd59ed
+D polyorb-termination_activity.ads  20120514092045 cbdbe65c
+D polyorb-transport.ads	20120514092117 91ef09de
+D polyorb-types.ads	20120514092113 f453197c
+D polyorb-utils.ads	20120514092113 6c128a8b
+D polyorb-utils-chained_lists.ads  20120514092117 3294f8a3
+D polyorb-utils-dynamic_tables.ads  20120514092116 6864320f
+D polyorb-utils-hfunctions.ads  20120514092107 82b4c8f6
+D polyorb-utils-hfunctions-hyper.ads  20120514092106 657d7a19
+D polyorb-utils-htables.ads  20120514092117 a4a1de38
+D polyorb-utils-htables-perfect.ads  20120514092116 54749466
+D polyorb-utils-ilists.ads  20120514092107 d241f94c
+D polyorb-utils-simple_flags.ads  20120514092117 3140190a
+D polyorb-utils-strings.ads  20120514092117 dae37d40
+D polyorb-utils-strings-lists.ads  20120514092109 969ebf9d
+D queue.ads		20140108225223 7202a836
+D referee_package.ads	20140108171519 22c49add
+D system.ads		20120510125846 75f1d483
+D s-atacco.ads		20120510125819 4c36d12f
+D s-atocou.ads		20120510125819 4a9c6cb4
+D s-atocou.adb		20120510125819 7116b4cf
+D s-dsatyp.ads		20120514092046 23c1e58e
+D s-exctab.ads		20120510125824 66e51330
+D s-finmas.ads		20120510125825 b95bb341
+D s-finroo.ads		20120510125825 4ff27390
+D s-imgint.ads		20120510125826 02dbe0c2
+D s-multip.ads		20120510125828 38ac9f73
+D s-oscons.ads		20120514140920 ed51b575
+D s-osinte.ads		20120510125828 a671a606
+D s-parame.ads		20120510125832 b6e20cc0
+D s-parint.ads		20120514092046 29c74135
+D s-pooglo.ads		20120510125832 542f33d0
+D s-rannum.ads		20120510125832 5eb33f0a
+D s-rpc.ads		20120510125833 d8a02bd2
+D s-secsta.ads		20120510125833 eea35a36
+D s-soflin.ads		20120510125833 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stausa.ads		20120510125834 017a0a05
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-stposu.ads		20120510125834 197be7e5
+D s-stratt.ads		20120510125834 aedef97e
+D s-tasinf.ads		20120510125836 e120e23a
+D s-taspri.ads		20120510125836 15f617a8
+D s-taprop.ads		20120510125835 1dd2e1b6
+D s-taskin.ads		20120510125836 5e24fb30
+D s-taprob.ads		20120510125835 502249e3
+D s-tpoben.ads		20120510125837 20b7a89e
+D s-tasren.ads		20120510125836 a67a9949
+D s-tassta.ads		20120510125836 3a253871
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D timer_package.ads	20140108171519 4be69085
+X 23 ball_package.ads
+11K9*Ball_Package 54e17 28|10w6 10r37
+16W24*Ball 38e17 28|21r32
+40P14*Ball_Access(16W24) 28|21r13
+42T19*TaskBall 50e21 28|25r36
+52P14*TaskBall_Access(42T19) 28|25r13
+X 25 common_types.ads
+4K9*Common_Types 35e17 28|8w6 8r37
+13n28*LFW{13E14} 28|69r25 69r49
+13n38*RFW{13E14} 28|70r25 70r49
+13n43*LMF{13E14} 28|65r25 65r49
+13n48*CMF{13E14} 28|66r25 66r49 67r25 67r49
+13n53*RMF{13E14} 28|68r25 68r49
+13n58*LDF{13E14} 28|61r25 61r49
+13n63*CDF{13E14} 28|62r25 62r49 63r25 63r49
+13n68*RDF{13E14} 28|64r25 64r49
+13n73*GKP{13E14} 28|60r25 60r49
+X 26 event_manager.ads
+7K9*Event_Manager 18e18 28|15w6 15r37 19r16 19r51
+9T15*E_Manager 14e18 28|19r65
+10Y15 Start 28|50s15
+16P14*E_Manager_Acc(9T15) 28|19r30
+X 27 field_package.ads
+10K9*Field_Package 116e18 28|9w6 9r37
+24W24*Field 112e18 28|20r33
+27U27 InitField 28|53s11
+114P14*Field_Access(24W24) 28|20r13
+X 28 game.adb
+17U11*Game 17b11 114l5 114t9
+19p9 E_Mgr{26|16P14} 20r43 50r9
+20p9 F{27|114P14} 21r37 25r45 39r44 40r44 43r44 53r9 74r81 75r81 76r81 77r81
+. 78r81 79r81 80r81 81r81 82r81 83r81 84r81 85r73 86r73 87r73 88r73 89r73
+. 90r73 91r73 92r73 93r73 94r73 95r73
+21p9 B{23|40P14} 25r48 43r47 74r84 75r84 76r84 77r84 78r84 79r84 80r84 81r84
+. 82r84 83r84 84r84 85r76 86r76 87r76 88r76 89r76 90r76 91r76 92r76 93r76
+. 94r76 95r76
+22p9 Tm{152|35P14} 105r26
+25p9 T{23|52P14} 105r46
+28p9 TP1{32|42P14} 39r51 57m17 57r17 60r9 61r9 62r9 63r9 64r9 65r9 66r9 67r9
+. 68r9 69r9 70r9 74r41 75r41 76r41 77r41 78r41 79r41 80r41 81r41 82r41 83r41
+. 84r41
+29p9 TP2{32|42P14} 40r51 58m17 58r17 60r33 61r33 62r33 63r33 64r33 65r33
+. 66r33 67r33 68r33 69r33 70r33 85r41 86r41 87r41 88r41 89r41 90r41 91r41
+. 92r41 93r41 94r41 95r41
+32a9 Players(32|57P14) 74m9 75m9 76m9 77m9 78m9 79m9 80m9 81m9 82m9 83m9
+. 84m9 85m9 86m9 87m9 88m9 89m9 90m9 91m9 92m9 93m9 94m9 95m9 99r26 100r26
+35p9 T1{32|18P14} 39r47 74r57 75r57 76r57 77r57 78r57 79r57 80r57 81r57 82r57
+. 83r57 84r57 99m17 99r17 105r30
+36p9 T2{32|18P14} 40r47 85r57 86r57 87r57 88r57 89r57 90r57 91r57 92r57 93r57
+. 94r57 95r57 100m17 100r17 105r34
+39p9 M1{31|30P14} 105r38
+40p9 M2{31|30P14} 105r42
+43p9 R{114|28P14}
+46p9 Tmr{152|46P14} 105m9
+56i13 i{integer} 57r21 58r21
+98i13 i{integer} 99r20 99r34 100r20 100r34
+X 29 interfac.ads
+61M9*Unsigned_32
+107V13*Shift_Left{61M9} 110|37i18
+X 31 manager_package.ads
+12K9*Manager_Package 28|12w6 12r29 31|32e20
+20T19*Manager 28|39r36 40r36 31|28e20
+30P14*Manager_Access(20T19) 28|39r14 40r14
+X 32 player_package.ads
+12K9*Player_Package 28|11w6 11r29 32|112e19
+15A14*Team 28|35r33 36r33
+18P14*Team_Access(15A14) 28|35r14 36r14
+20W24*Props 28|57r31 58r31 32|36e18
+23U27 SetRole 28|60s17 60s41 61s17 61s41 62s17 62s41 63s17 63s41 64s17 64s41
+. 65s17 65s41 66s17 66s41 67s17 67s41 68s17 68s41 69s17 69s41 70s17 70s41
+38P14*Props_Access(20W24)
+40A14*PropsArray(38P14)<integer> 28|28r40 29r40
+42P14*PropsArray_Access(40A14) 28|28r15 29r15
+45T19*Player 28|74r28 75r28 76r28 77r28 78r28 79r28 80r28 81r28 82r28 83r28
+. 84r28 85r28 86r28 87r28 88r28 89r28 90r28 91r28 92r28 93r28 94r28 95r28
+. 32|54e19
+57P14*Player_Access(45T19) 28|32r36
+X 35 polyorb-any.ads
+218V28*"="=220:32{boolean} 103|41i19
+X 41 polyorb-binding_objects.ads
+52P9*Binding_Object_Access(50R9)
+56V13*Link(52P9) 109|54i21
+X 57 polyorb-opaque-chunk_pools.ads
+46R9*Chunk
+47P9*Chunk_Access(46R9[43|357])
+98V13 Link(47P9[43|357]) 109|54i21[43|357]
+X 92 polyorb-task_info.ads
+70R9*Task_Info
+71P9*Task_Info_Access(70R9)
+255V13 Link(71P9) 109|54i21
+X 103 polyorb-utils-chained_lists.ads
+133R9 Node
+134P9 Node_Access(133R9)
+157V13 Link(134P9[58|311]) 109|54i21[58|311]
+X 114 referee_package.ads
+12K9*Referee_Package 28|13w6 13r29 114|30e20
+17T19*Referee 28|43r35 114|25e20
+28P14*Referee_Access(17T19) 28|43r13
+X 152 timer_package.ads
+15K9*Timer_Package 28|14w6 14r37 152|48e18
+17W24*TimeCount 28|22r38 152|32e22
+35P14*TimeCount_Access(17W24) 28|22r14
+37T19*Timer 28|105r20 152|43e18
+46P14*Timer_Access(37T19) 28|46r15
+

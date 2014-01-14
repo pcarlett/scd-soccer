@@ -12,7 +12,7 @@ pragma Elaborate_All (Gtk.Handlers);
 with Gtk.Label;			use Gtk.Label;
 with Pango.Font;		use Pango.Font;
 with Gtk.Main;			use Gtk.Main;
-with Ada.Text_IO;		use Ada.Text_IO;
+-- with Ada.Text_IO;		use Ada.Text_IO;
 
 package body Display_Package is
 	
@@ -22,10 +22,7 @@ package body Display_Package is
 	Layer3_Gc : Gdk.GC.Gdk_GC;
 	Layer4_Gc : Gdk.GC.Gdk_GC;
 
-	Field : Field_Access;
-	Ball : Ball_Access;
-	Time : TimeCount_Access;
-	Timer : Timer_Access;
+	Vec : Vector_Access;
 
 	package Void_Cb is new Gtk.Handlers.Callback (Gtk.Window.Gtk_Window_Record);
 	package Button_Cb is new Gtk.Handlers.Callback (Gtk.Button.Gtk_Button_Record);
@@ -33,7 +30,6 @@ package body Display_Package is
 	package Timer_Timeout is new Gtk.Main.Timeout (Gtk_Label);
 	package Score_Timeout is new Gtk.Main.Timeout (Gtk_Label);
 	
-
 	------------------
 	-- Draw_Content --
 	------------------
@@ -42,7 +38,6 @@ package body Display_Package is
 		BP, PP : Position;
 	begin
 		-- Erase the old
-		
 		Gdk.Drawable.Get_Size(Pixmap, Width, Height);
 		Gdk.Drawable.Draw_Rectangle(Pixmap, Layer0_Gc, True, 0, 0, Width, Height);
 		
@@ -66,23 +61,23 @@ package body Display_Package is
 		Gdk.Drawable.Draw_Arc(Pixmap, Layer1_Gc, False, 260, 149, 130, 130, 0 * 64, 360 * 64);
 
 		-- disegna la palla
-		BP := Field.GetBallPosition;
+		BP := Vec.GetBallPosition;
 		Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, True, Gint(BP.Col*2), Gint(BP.Row*2), 10, 10, 0 * 64, 360 * 64);
 
 		-- disegna i vari giocatori in campo
-		for i in 1..22 loop
+		for i in 0..22 loop
 			if (i < 12) then
-				PP := Field.GetPlayerPosition(i);
+				PP := Vec.GetPlayerPosition(i);
 				Gdk.Drawable.Draw_Arc(Pixmap, Layer2_Gc, True, Gint(PP.Col*2), Gint(PP.Row*2), 20, 20, 0 * 64, 360 * 64);
-				if (i = Ball.GetOwner) then
-					Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, False, Gint(PP.Col*2-3), Gint(PP.Row*2-3), 26, 26, 0 * 64, 360 * 64);
-				end if;
+				-- if (i = Ball.GetOwner) then
+				-- 	Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, False, Gint(PP.Col*2-3), Gint(PP.Row*2-3), 26, 26, 0 * 64, 360 * 64);
+				-- end if;
 			else
-				PP := Field.GetPlayerPosition(i);
+				PP := Vec.GetPlayerPosition(i);
 				Gdk.Drawable.Draw_Arc(Pixmap, Layer3_Gc, True, Gint(PP.Col*2), Gint(PP.Row*2), 20, 20, 0 * 64, 360 * 64);
-				if (i = Ball.GetOwner) then
-					Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, False, Gint(PP.Col*2-3), Gint(PP.Row*2-3), 26, 26, 0 * 64, 360 * 64);
-				end if;
+				-- if (i = Ball.GetOwner) then
+				-- 	Gdk.Drawable.Draw_Arc(Pixmap, Layer4_Gc, False, Gint(PP.Col*2-3), Gint(PP.Row*2-3), 26, 26, 0 * 64, 360 * 64);
+				-- end if;
 
 			end if;
 		end loop;
@@ -106,7 +101,7 @@ package body Display_Package is
 	------------------
 	function UpdateScore (Label : in Gtk_Label) return Boolean is
 	begin
-		Set_Text (Label, "Score:   Red " & Integer'Image(Field.GetScore(1)) & " - " & Integer'Image(Field.GetScore(2)) & " Blue");
+		Set_Text (Label, "Score:   Red " & Integer'Image(Vec.GetScore(1)) & " - " & Integer'Image(Vec.GetScore(2)) & " Blue");
 		return True;
 	end UpdateScore;
    
@@ -116,8 +111,8 @@ package body Display_Package is
 	function UpdateTimer (Label : in Gtk_Label) return Boolean is
 		T : Integer;
 	begin
-		T := Time.GetTime;
-		Set_Text (Label, "Time:   " & Integer'Image(T/5) & ":00");
+		-- T := Time.GetTime;
+		-- Set_Text (Label, "Time:   " & Integer'Image(T/5) & ":00");
 		return True;
 	end UpdateTimer;
 
@@ -127,7 +122,8 @@ package body Display_Package is
 	procedure Starter (Button : access Gtk.Button.Gtk_Button_Record'Class) is
 		pragma Warnings (Off, Button);
 	begin
-		Timer.Start;
+		-- Timer.Start;
+		null;
 	end Starter;
 	
 	-------------
@@ -148,9 +144,9 @@ package body Display_Package is
 		Gtk.Main.Gtk_Exit (0);
 	end Quit;
 	
-	-------------------------
-	-- Init Field and Ball --
-	-------------------------
+	-----------------
+	-- Init Vector --
+	-----------------
 	procedure References(V : in Vector_Access) is
 	begin
 		-- inizializza la variablile Vector posizionale
@@ -228,7 +224,7 @@ package body Display_Package is
 		Gtk.Label.Set_Style (Timer, Style);
 		
 		-- Row 1.1: a label with style: Score
-		Gtk.Label.Gtk_New (Score, "Score:   Red " & Integer'Image(Field.GetScore(1)) & " - " & Integer'Image(Field.GetScore(2)) & " Blue");
+		Gtk.Label.Gtk_New (Score, "Score:   Red " & Integer'Image(Vec.GetScore(1)) & " - " & Integer'Image(Vec.GetScore(2)) & " Blue");
 		Style := Gtk.Style.Copy (Gtk.Window.Get_Style (Win));
 		Gtk.Style.Set_Font_Description (Style, Pango.Font.From_String ("Arial Bold 14"));
 		Gtk.Label.Set_Style (Score, Style);

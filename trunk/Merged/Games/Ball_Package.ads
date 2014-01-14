@@ -5,8 +5,8 @@
 --
 --
 ------------------------------------------------------
-with Field_Package;
-use Field_Package;
+with Field_Package;		use Field_Package;
+with Common_Types;		use Common_Types;
 
 package Ball_Package is
 

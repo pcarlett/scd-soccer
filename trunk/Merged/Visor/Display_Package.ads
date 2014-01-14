@@ -5,6 +5,7 @@
 --
 --
 ------------------------------------------------------
+with Common_Types;		use Common_Types;
 with Vector_Package;	use Vector_Package;
 with Gtk.Window;	 	use Gtk.Window;
 with Gtk.Drawing_Area;	use Gtk.Drawing_Area;

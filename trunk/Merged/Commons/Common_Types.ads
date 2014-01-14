@@ -12,7 +12,7 @@ package Common_Types is
 	-- dichiarazione dei ruoli dei giocatori
 	type Role is (STK, LFW, CFW, RFW, LMF, CMF, RMF, LDF, CDF, RDF, GKP);
 	
-	type Team is (Blue, Red);
+	-- type Team is (Blue, Red);
 	
 	type Position is record
 		ID : Integer;

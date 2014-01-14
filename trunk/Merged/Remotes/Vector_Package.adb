@@ -29,6 +29,17 @@ package body Vector_Package is
 			Ball := (0, 102, 157);
 		end InitVector;
 	
+		-- procedura per la modifica dello stato del campo su un oggetto protetto
+		procedure SetPosition (ID : in Integer; R : in Integer; C : in Integer) is
+		begin
+			for i in 0..22 loop 
+				if (PList(i).ID = ID) then
+					PList(i).Row := R;
+					PList(i).Col := C;
+				end if;
+			end loop;			
+		end SetPosition;
+
 		-- funzione per leggere lo stato del campo
 		function GetPositions return PositionList is
 		begin

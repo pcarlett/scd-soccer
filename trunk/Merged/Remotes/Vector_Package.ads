@@ -13,6 +13,9 @@ package Vector_Package is
 		-- funzione per inizializzare le posizioni
 		procedure InitVector;
 		
+		-- procedura per la modifica dello stato del campo su un oggetto protetto
+		procedure SetPosition (ID : in Integer; M : in Move; Dir : in Integer);	
+		
 		-- funzione per leggere lo stato del campo
 		function GetPositions return PositionList;
 	

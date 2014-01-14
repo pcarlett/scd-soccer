@@ -10,7 +10,7 @@ INCLUDE_DIRS = $(subdirs:%=-I./%)
 ####################################################
 OS := $(shell uname)
 OBJ = build
-TARGET = Game.adb
+TARGET = Game
 GNATMAKE = gnatmake -D $(OBJ)
 CARGS = -cargs -O3 -gnatp -gnatwu
 BARGS = -bargs
@@ -48,9 +48,10 @@ distr: INCLUDE = $(shell gtkada-config --static --cflags)
 distr: BARGS += -static
 distr: LARGS += $(shell gtkada-config --static --libs)
 distr: LARGS += -dead_strip
-distr: *.ad[sb]
 distr:
 	$(GNATDIST) -g $(INCLUDE_DIRS) $(CONFIG_FILE) $(INCLUDE) $(CARGS) $(BARGS) $(LARGS)
+
+#	$(GNATDIST) -g $(INCLUDE_DIRS) $(CONFIG_FILE) $(INCLUDE) $(CARGS) $(BARGS) $(LARGS)
 
 $(OBJ):
 	mkdir $(OBJ)

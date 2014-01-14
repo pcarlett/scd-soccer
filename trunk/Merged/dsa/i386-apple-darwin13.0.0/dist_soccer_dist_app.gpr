@@ -1,0 +1,16 @@
+with "pcs_project";
+project dist_soccer_dist_app is
+   for Object_Dir use "obj";
+   for Source_Dirs use (".",
+     "../.."
+,
+     "/Users/paolo/Universita/scd_soccer/scd-soccer/trunk/Merged",
+     "/Users/paolo/Universita/scd_soccer/scd-soccer/trunk/Merged/Commons",
+     "/Users/paolo/Universita/scd_soccer/scd-soccer/trunk/Merged/Events",
+     "/Users/paolo/Universita/scd_soccer/scd-soccer/trunk/Merged/Games",
+     "/Users/paolo/Universita/scd_soccer/scd-soccer/trunk/Merged/Programs",
+     "/Users/paolo/Universita/scd_soccer/scd-soccer/trunk/Merged/Remotes",
+     "/Users/paolo/Universita/scd_soccer/scd-soccer/trunk/Merged/Tasks",
+     "/Users/paolo/Universita/scd_soccer/scd-soccer/trunk/Merged/Visor",
+     "/usr/local/gtkada/include/gtkada");
+end dist_soccer_dist_app;

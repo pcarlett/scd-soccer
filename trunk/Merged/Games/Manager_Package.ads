@@ -7,6 +7,7 @@
 ------------------------------------------------------
 with Field_Package;			use Field_Package;
 with Player_Package;		use Player_Package;
+with Common_Types;			use Common_Types;
 
 package Manager_Package is
 			

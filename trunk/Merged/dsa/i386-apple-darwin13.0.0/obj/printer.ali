@@ -1,0 +1,100 @@
+V "GNAT Lib v2012"
+A -O3
+A -g
+A -gnatp
+A -gnatwu
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnvnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnvnnnnnnnnnnnnnn
+
+U printer%b		printer.adb		5fffe864 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+U printer%s		printer.ads		4f0f33ff EE NE OO RC PK
+W common_types%s	common_types.ads	common_types.ali
+
+D ada.ads		20120510125803 3ffc8e18
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125753 52ecdc1b
+D a-ioexce.ads		20120510125753 8b9de6cd
+D a-stream.ads		20120510125756 2ca4ee37
+D a-tags.ads		20120510125759 6c0509d0
+D a-textio.ads		20120510125800 386df5d4
+D a-unccon.ads		20120510125801 f9eb8f06
+D common_types.ads	20140114222919 87455f19
+D interfac.ads		20120510125815 129923ea
+D i-cstrea.ads		20120510125814 1bd72c32
+D printer.ads		20140114222514 c84a6ce6
+D printer.adb		20140114222817 afd87156
+D system.ads		20120510125846 75f1d483
+D s-crtl.ads		20120510125824 ac77b159
+D s-exctab.ads		20120510125824 66e51330
+D s-ficobl.ads		20120510125825 443b9d66
+D s-finmas.ads		20120510125825 b95bb341
+D s-finroo.ads		20120510125825 4ff27390
+D s-imenne.ads		20120510125825 8707cbf0
+D s-imgint.ads		20120510125826 02dbe0c2
+D s-parame.ads		20120510125832 b6e20cc0
+D s-pooglo.ads		20120510125832 542f33d0
+D s-soflin.ads		20120510125833 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-wchcon.ads		20120510125840 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 13|5r6 5r29
+X 7 a-textio.ads
+49K13*Text_IO 471e16 13|5w10 5r33
+263U14*Put_Line 13|10s17 15s17 20s17 26s17 27s17 28s17 29s17 30s17 31s17
+. 32s17 33s17 34s17
+X 9 common_types.ads
+4K9*Common_Types 35e17 12|5w6 5r37
+8E10*Actions 8e62 12|12r32 13r48 13|8r32 10r49 13r48 15r79
+X 12 printer.ads
+8K9*Printer 22l5 22e12 13|6b14 47l5 47t12
+12U19*Print 12>26 13|8b19 11l13 11t18
+12e26 A{9|8E10} 13|8b26 10r63
+13U19*Print 13>26 13>42 13|13b19 16l13 16t18
+13i26 ID{integer} 13|13b26 15r66
+13e42 A{9|8E10} 13|13b42 15r93
+14U19*Print 14>26 14>42 14>57 13|18b19 22l13 22t18
+14i26 ID{integer} 13|18b26 20r67
+14i42 R{integer} 13|18b42 21r37
+14i57 C{integer} 13|18b57 21r68
+15U19*Print 15>26 15>30 15>34 15>38 15>42 15>48 15>54 15>60 15>66 15>70 13|24b19
+. 35l13 35t18
+15i26 G1{integer} 13|24b26 28r63
+15i30 G2{integer} 13|24b30 28r97
+15i34 F1{integer} 13|24b34 29r63
+15i38 F2{integer} 13|24b38 29r97
+15i42 Off1{integer} 13|24b42 30r63
+15i48 Off2{integer} 13|24b48 30r99
+15i54 Out1{integer} 13|24b54 31r63
+15i60 Out2{integer} 13|24b60 31r99
+15i66 P1{integer} 13|24b66 32r63
+15i70 P2{integer} 13|24b70 32r97
+17U19*Transmit 17>29 17>45 17>60 13|37b19 40l13 40t21
+17i29 ID{integer} 13|37b29
+17i45 R{integer} 13|37b45
+17i60 C{integer} 13|37b60
+18U19*Transmit 18>29 18>33 18>37 18>41 18>45 18>51 18>57 18>63 18>69 18>73
+. 13|42b19 45l13 45t21
+18i29 G1{integer} 13|42b29
+18i33 G2{integer} 13|42b33
+18i37 F1{integer} 13|42b37
+18i41 F2{integer} 13|42b41
+18i45 Off1{integer} 13|42b45
+18i51 Off2{integer} 13|42b51
+18i57 Out1{integer} 13|42b57
+18i63 Out2{integer} 13|42b63
+18i69 P1{integer} 13|42b69
+18i73 P2{integer} 13|42b73
+

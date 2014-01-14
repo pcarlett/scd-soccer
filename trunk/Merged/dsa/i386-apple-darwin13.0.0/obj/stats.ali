@@ -1,0 +1,113 @@
+V "GNAT Lib v2012"
+A -O3
+A -g
+A -gnatp
+A -gnatwu
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnvnnnnvnnnvnnvnnnnnnnnnnnv1+nn
+
+U stats%b		stats.adb		7fe70a0d OO PK
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U stats%s		stats.ads		6efed93f EE NE OO RC PK
+W common_types%s	common_types.ads	common_types.ali
+
+D ada.ads		20120510125803 3ffc8e18
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125753 52ecdc1b
+D a-ioexce.ads		20120510125753 8b9de6cd
+D a-stream.ads		20120510125756 2ca4ee37
+D a-tags.ads		20120510125759 6c0509d0
+D a-textio.ads		20120510125800 386df5d4
+D a-unccon.ads		20120510125801 f9eb8f06
+D common_types.ads	20140114222919 87455f19
+D interfac.ads		20120510125815 129923ea
+D i-c.ads		20120510125814 5421119b
+D i-cstrea.ads		20120510125814 1bd72c32
+D stats.ads		20140108171519 e9bb8626
+D stats.adb		20140108171519 ae3179ff
+D system.ads		20120510125846 75f1d483
+D s-atacco.ads		20120510125819 4c36d12f
+D s-crtl.ads		20120510125824 ac77b159
+D s-exctab.ads		20120510125824 66e51330
+D s-ficobl.ads		20120510125825 443b9d66
+D s-finmas.ads		20120510125825 b95bb341
+D s-finroo.ads		20120510125825 4ff27390
+D s-multip.ads		20120510125828 38ac9f73
+D s-oscons.ads		20120514140920 ed51b575
+D s-osinte.ads		20120510125828 a671a606
+D s-parame.ads		20120510125832 b6e20cc0
+D s-pooglo.ads		20120510125832 542f33d0
+D s-soflin.ads		20120510125833 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stausa.ads		20120510125834 017a0a05
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-tasinf.ads		20120510125836 e120e23a
+D s-taspri.ads		20120510125836 15f617a8
+D s-taskin.ads		20120510125836 5e24fb30
+D s-taprob.ads		20120510125835 502249e3
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-wchcon.ads		20120510125840 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 14|5r6 5r29
+X 7 a-textio.ads
+49K13*Text_IO 471e16 14|5w10 5r33
+263U14*Put_Line 14|24s64 33s64 36s41
+X 9 common_types.ads
+4K9*Common_Types 35e17 13|5w6 5r29
+8E10*Actions 8e62 13|10r49 14|9r67 14r67 50r49
+8n22*Goal{8E10} 14|19r54 28r54
+8n28*Fault{8E10} 14|20r54 29r54
+8n35*Offside{8E10} 14|21r54 30r54
+8n44*Ball_Out{8E10} 14|22r54 31r54
+8n54*Penalty{8E10} 14|23r54 32r54
+X 13 stats.ads
+6K9*Stats 19l5 19e10 14|6b14 60l5 60t10
+10U19*Update 10>27 10>43 13r30 14|50b19 53l13 53t19
+10i27 ID{integer} 14|50b27 52r50
+10e43 A{9|8E10} 14|50b43 52r54
+11U19*Get_Stats 11<30 11<34 11<38 11<42 11<46 11<52 11<58 11<64 11<70 11<74
+. 14|55b15 58l13 58t22
+11i30 G1{integer} 14|55b26 57m53
+11i34 G2{integer} 14|55b30 57m57
+11i38 F1{integer} 14|55b34 57m61
+11i42 F2{integer} 14|55b38 57m65
+11i46 Off1{integer} 14|55b42 57m69
+11i52 Off2{integer} 14|55b48 57m75
+11i58 Out1{integer} 14|55b54 57m81
+11i64 Out2{integer} 14|55b60 57m87
+11i70 P1{integer} 14|55b66 57m93
+11i74 P2{integer} 14|55b70 57m97
+16N9 Stat_Size 17r49
+17I17 Stat_Range{positive} 18r23
+18a9 Stat(integer) 14|19m62 19r73 20m63 20r74 21m65 21r76 22m66 22r77 23m65
+. 23r76 28m62 28r73 29m63 29r74 30m65 30r76 31m66 31r77 32m65 32r77 42r31
+. 42r55 43r31 43r55 44r33 44r57 45r33 45r57 46r31 46r55
+X 14 stats.adb
+8w19 Protected_Stat 13b24 48l13 48t27 52r17 57r17
+9U27 Protected_Update 9>45 9>61 14b27 38l21 38t37 52s32
+9i45 ID{integer} 14b45 16r30
+9e61 A{9|8E10} 14b61 18r46 27r46
+10U27 Protected_Get_Stats 10<48 10<52 10<56 10<60 10<64 10<70 10<76 10<82
+. 10<88 10<92 40b27 47l21 47t40 57s32
+10i48 G1{integer} 40b48 42m25
+10i52 G2{integer} 40b52 42m49
+10i56 F1{integer} 40b56 43m25
+10i60 F2{integer} 40b60 43m49
+10i64 Off1{integer} 40b64 44m25
+10i70 Off2{integer} 40b70 44m49
+10i76 Out1{integer} 40b76 45m25
+10i82 Out2{integer} 40b82 45m49
+10i88 P1{integer} 40b88 46m25
+10i92 P2{integer} 40b92 46m49
+

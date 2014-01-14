@@ -3,7 +3,8 @@
 --
 --------------------------------------------------------------------------------
 with Common_Types;		use Common_Types;
-with Vector_Package;	use Vector_Package;
+-- with Vector_Package;	use Vector_Package;
+
 package Printer is
 	
 	pragma Remote_Call_Interface;
@@ -18,6 +19,4 @@ package Printer is
 	
 	pragma Asynchronous (Print);
 	
-	Vector Vec := new Vector;
-
 end Printer;

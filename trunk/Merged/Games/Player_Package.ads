@@ -5,6 +5,7 @@
 --
 --
 ------------------------------------------------------
+with Common_Types;		use Common_Types;
 with Field_Package;		use Field_Package;
 with Ball_Package;		use Ball_Package;
 

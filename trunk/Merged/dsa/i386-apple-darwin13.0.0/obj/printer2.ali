@@ -1,0 +1,84 @@
+V "GNAT Lib v2012"
+A -O3
+A -g
+A -gnatp
+A -gnatwu
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnvnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnvnnnnnnnnnnnnnn
+
+U printer2%b		printer2.adb		53396130 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+U printer2%s		printer2.ads		f24cf71c EE NE OO RC PK
+W common_types%s	common_types.ads	common_types.ali
+
+D ada.ads		20120510125803 3ffc8e18
+D a-except.ads		20120510125752 ec1b44c1
+D a-finali.ads		20120510125753 52ecdc1b
+D a-ioexce.ads		20120510125753 8b9de6cd
+D a-stream.ads		20120510125756 2ca4ee37
+D a-tags.ads		20120510125759 6c0509d0
+D a-textio.ads		20120510125800 386df5d4
+D a-unccon.ads		20120510125801 f9eb8f06
+D common_types.ads	20140114222919 87455f19
+D interfac.ads		20120510125815 129923ea
+D i-cstrea.ads		20120510125814 1bd72c32
+D printer2.ads		20140108171519 7509a805
+D printer2.adb		20140108171519 1e5d3ce1
+D system.ads		20120510125846 75f1d483
+D s-crtl.ads		20120510125824 ac77b159
+D s-exctab.ads		20120510125824 66e51330
+D s-ficobl.ads		20120510125825 443b9d66
+D s-finmas.ads		20120510125825 b95bb341
+D s-finroo.ads		20120510125825 4ff27390
+D s-imenne.ads		20120510125825 8707cbf0
+D s-imgint.ads		20120510125826 02dbe0c2
+D s-parame.ads		20120510125832 b6e20cc0
+D s-pooglo.ads		20120510125832 542f33d0
+D s-soflin.ads		20120510125833 24c8153c
+D s-stache.ads		20120510125834 596fc1b4
+D s-stalib.ads		20120510125834 f78bcf95
+D s-stoele.ads		20120510125834 facd7d98
+D s-stoele.adb		20120510125834 afc5dc80
+D s-stopoo.ads		20120510125834 7b8fbeee
+D s-traent.ads		20120510125838 5221ee41
+D s-unstyp.ads		20120510125838 6ae15c76
+D s-wchcon.ads		20120510125840 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 13|5r6 5r29
+X 7 a-textio.ads
+49K13*Text_IO 471e16 13|5w10 5r33
+263U14*Put_Line 13|10s17 15s17 20s17 26s17 27s17 28s17 29s17 30s17 31s17
+. 32s17 33s17 34s17
+X 9 common_types.ads
+4K9*Common_Types 35e17 12|5w6 5r37
+8E10*Actions 8e62 12|10r32 11r48 13|8r32 10r49 13r48 15r79
+X 12 printer2.ads
+6K9*Printer2 17l5 17e13 13|6b14 37l5 37t13
+10U19*Print 10>26 13|8b19 11l13 11t18
+10e26 A{9|8E10} 13|8b26 10r63
+11U19*Print 11>26 11>42 13|13b19 16l13 16t18
+11i26 ID{integer} 13|13b26 15r66
+11e42 A{9|8E10} 13|13b42 15r93
+12U19*Print 12>26 12>42 12>57 13|18b19 22l13 22t18
+12i26 ID{integer} 13|18b26 20r67
+12i42 R{integer} 13|18b42 21r37
+12i57 C{integer} 13|18b57 21r68
+13U19*Print 13>26 13>30 13>34 13>38 13>42 13>48 13>54 13>60 13>66 13>70 13|24b19
+. 35l13 35t18
+13i26 G1{integer} 13|24b26 28r63
+13i30 G2{integer} 13|24b30 28r97
+13i34 F1{integer} 13|24b34 29r63
+13i38 F2{integer} 13|24b38 29r97
+13i42 Off1{integer} 13|24b42 30r63
+13i48 Off2{integer} 13|24b48 30r99
+13i54 Out1{integer} 13|24b54 31r63
+13i60 Out2{integer} 13|24b60 31r99
+13i66 P1{integer} 13|24b66 32r63
+13i70 P2{integer} 13|24b70 32r97
+
